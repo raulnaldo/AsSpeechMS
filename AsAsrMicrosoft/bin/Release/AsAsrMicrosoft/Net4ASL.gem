@@ -1,0 +1,4282 @@
+version "8.1"
+comment {
+    Automatic Generated Dll Wrapper Module.
+    This Module was generated on 2015-07-01 11:18:28
+    by DllTestScriptGeneratorForUCI81 Version 1.0.1
+    for Net4ASL Dll.
+}
+
+modules {
+    import <"EasyDebug.gem">
+        into namespace Debug
+        comment {Debug Module}
+}
+
+dependencies {
+    dll native "Net4ASLDll" in file <"Net4ASL.dll">
+}
+
+constants {
+    RETURN_OK:= 0
+        comment {Method has executed correctly}
+    RETURN_ERROR:= 1
+        comment {An error has occurred}
+    RETURN_EXCEPTION:= 2
+        comment {The reflected component returned an exception. The exception should be passed to the script on a 'rh' Object Handle ref parameter.}
+    RETURN_ERROR_FILE_NOT_FOUND:= 1001
+        comment {The specified file was not found.}
+    RETURN_ERROR_NULL_REFERENCE:= 1002
+        comment {A null reference was specified.}
+    RETURN_ERROR_UNRESOLVABLE_TYPE:= 1003
+        comment {The specified type cannot be resolved.}
+    RETURN_ERROR_NUMBER_TOO_LONG:= 1004
+        comment {A number too long was specified.}
+    RETURN_ERROR_ASSEMBLY_NOT_LOADED:= 1005
+        comment {The assembly was not loaded.}
+    RETURN_ERROR_SESSION_NOT_INITIALIZED:= 1006
+        comment {The session was not initialized.}
+    RETURN_ERROR_NOT_INITIALIZED:= 1007
+        comment {The Dll was not initialized.}
+}
+
+
+external session cdecl function Internal_BoxEasyBooleanToBoolean
+(
+    ibInBool:  boolean as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyBooleanToBoolean" compiler "VisualC"
+
+function BoxEasyBooleanToBoolean
+(
+    ibInBool:  boolean
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyBooleanToBoolean Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyBooleanToBoolean()')
+   call Debug::ParamHighDetail('[IN ] in_bool', ibInBool)
+   BoxEasyBooleanToBoolean := Internal_BoxEasyBooleanToBoolean( ibInBool , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyBooleanToBoolean() -> [$(BoxEasyBooleanToBoolean)]')
+}
+
+external session cdecl function Internal_BoxEasyBooleanToNullableBoolean
+(
+    ibInBool:  boolean as easy type,
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyBooleanToNullableBoolean" compiler "VisualC"
+
+function BoxEasyBooleanToNullableBoolean
+(
+    ibInBool:  boolean
+        comment {},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyBooleanToNullableBoolean Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyBooleanToNullableBoolean()')
+   call Debug::ParamHighDetail('[IN ] in_bool', ibInBool)
+   BoxEasyBooleanToNullableBoolean := Internal_BoxEasyBooleanToNullableBoolean( ibInBool , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyBooleanToNullableBoolean() -> [$(BoxEasyBooleanToNullableBoolean)]')
+}
+
+external session cdecl function Internal_BoxEasyDateTimeToDateTime
+(
+    idtInDatetime:  datetime as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyDateTimeToDateTime" compiler "VisualC"
+
+function BoxEasyDateTimeToDateTime
+(
+    idtInDatetime:  datetime
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyDateTimeToDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyDateTimeToDateTime()')
+   call Debug::ParamHighDetail('[IN ] in_datetime', idtInDatetime)
+   BoxEasyDateTimeToDateTime := Internal_BoxEasyDateTimeToDateTime( idtInDatetime , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyDateTimeToDateTime() -> [$(BoxEasyDateTimeToDateTime)]')
+}
+
+external session cdecl function Internal_BoxEasyDateTimeToNullableDateTime
+(
+    idtInDatetime:  datetime as easy type,
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyDateTimeToNullableDateTime" compiler "VisualC"
+
+function BoxEasyDateTimeToNullableDateTime
+(
+    idtInDatetime:  datetime
+        comment {},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyDateTimeToNullableDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyDateTimeToNullableDateTime()')
+   call Debug::ParamHighDetail('[IN ] in_datetime', idtInDatetime)
+   BoxEasyDateTimeToNullableDateTime := Internal_BoxEasyDateTimeToNullableDateTime( idtInDatetime , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyDateTimeToNullableDateTime() -> [$(BoxEasyDateTimeToNullableDateTime)]')
+}
+
+external session cdecl function Internal_BoxEasyDateTimeToNullableTimeSpan
+(
+    idtInDatetime:  datetime as easy type,
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyDateTimeToNullableTimeSpan" compiler "VisualC"
+
+function BoxEasyDateTimeToNullableTimeSpan
+(
+    idtInDatetime:  datetime
+        comment {},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyDateTimeToNullableTimeSpan Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyDateTimeToNullableTimeSpan()')
+   call Debug::ParamHighDetail('[IN ] in_datetime', idtInDatetime)
+   BoxEasyDateTimeToNullableTimeSpan := Internal_BoxEasyDateTimeToNullableTimeSpan( idtInDatetime , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyDateTimeToNullableTimeSpan() -> [$(BoxEasyDateTimeToNullableTimeSpan)]')
+}
+
+external session cdecl function Internal_BoxEasyDateTimeToTimeSpan
+(
+    idtInDatetime:  datetime as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyDateTimeToTimeSpan" compiler "VisualC"
+
+function BoxEasyDateTimeToTimeSpan
+(
+    idtInDatetime:  datetime
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyDateTimeToTimeSpan Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyDateTimeToTimeSpan()')
+   call Debug::ParamHighDetail('[IN ] in_datetime', idtInDatetime)
+   BoxEasyDateTimeToTimeSpan := Internal_BoxEasyDateTimeToTimeSpan( idtInDatetime , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyDateTimeToTimeSpan() -> [$(BoxEasyDateTimeToTimeSpan)]')
+}
+
+external session cdecl function Internal_BoxEasyDateToDateTime
+(
+    idInDate:  date as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyDateToDateTime" compiler "VisualC"
+
+function BoxEasyDateToDateTime
+(
+    idInDate:  date
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyDateToDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyDateToDateTime()')
+   call Debug::ParamHighDetail('[IN ] in_date', idInDate)
+   BoxEasyDateToDateTime := Internal_BoxEasyDateToDateTime( idInDate , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyDateToDateTime() -> [$(BoxEasyDateToDateTime)]')
+}
+
+external session cdecl function Internal_BoxEasyDateToNullableDateTime
+(
+    idInDate:  date as easy type,
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyDateToNullableDateTime" compiler "VisualC"
+
+function BoxEasyDateToNullableDateTime
+(
+    idInDate:  date
+        comment {},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyDateToNullableDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyDateToNullableDateTime()')
+   call Debug::ParamHighDetail('[IN ] in_date', idInDate)
+   BoxEasyDateToNullableDateTime := Internal_BoxEasyDateToNullableDateTime( idInDate , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyDateToNullableDateTime() -> [$(BoxEasyDateToNullableDateTime)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToByte
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToByte" compiler "VisualC"
+
+function BoxEasyNumberToByte
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToByte Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToByte()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToByte := Internal_BoxEasyNumberToByte( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToByte() -> [$(BoxEasyNumberToByte)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToDecimal
+(
+    inInNum:  number(30,15) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToDecimal" compiler "VisualC"
+
+function BoxEasyNumberToDecimal
+(
+    inInNum:  number(30,15)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToDecimal Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToDecimal()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToDecimal := Internal_BoxEasyNumberToDecimal( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToDecimal() -> [$(BoxEasyNumberToDecimal)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToDouble
+(
+    inInNum:  number(30,15) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToDouble" compiler "VisualC"
+
+function BoxEasyNumberToDouble
+(
+    inInNum:  number(30,15)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToDouble Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToDouble()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToDouble := Internal_BoxEasyNumberToDouble( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToDouble() -> [$(BoxEasyNumberToDouble)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToInt16
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToInt16" compiler "VisualC"
+
+function BoxEasyNumberToInt16
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToInt16 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToInt16()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToInt16 := Internal_BoxEasyNumberToInt16( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToInt16() -> [$(BoxEasyNumberToInt16)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToInt32
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToInt32" compiler "VisualC"
+
+function BoxEasyNumberToInt32
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToInt32 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToInt32()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToInt32 := Internal_BoxEasyNumberToInt32( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToInt32() -> [$(BoxEasyNumberToInt32)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToInt64
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToInt64" compiler "VisualC"
+
+function BoxEasyNumberToInt64
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToInt64 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToInt64()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToInt64 := Internal_BoxEasyNumberToInt64( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToInt64() -> [$(BoxEasyNumberToInt64)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableBoolean
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+comment {Boxes easy type number to nullable numeric base types}
+in "Net4ASLDll" named "BoxEasyNumberToNullableBoolean" compiler "VisualC"
+
+function BoxEasyNumberToNullableBoolean
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment {Boxes easy type number to nullable numeric base types BoxEasyNumberToNullableBoolean Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableBoolean()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableBoolean := Internal_BoxEasyNumberToNullableBoolean( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableBoolean() -> [$(BoxEasyNumberToNullableBoolean)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableByte
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableByte" compiler "VisualC"
+
+function BoxEasyNumberToNullableByte
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableByte Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableByte()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableByte := Internal_BoxEasyNumberToNullableByte( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableByte() -> [$(BoxEasyNumberToNullableByte)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableDecimal
+(
+    inInNum:  number(30,15) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableDecimal" compiler "VisualC"
+
+function BoxEasyNumberToNullableDecimal
+(
+    inInNum:  number(30,15)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableDecimal Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableDecimal()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableDecimal := Internal_BoxEasyNumberToNullableDecimal( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableDecimal() -> [$(BoxEasyNumberToNullableDecimal)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableDouble
+(
+    inInNum:  number(30,15) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableDouble" compiler "VisualC"
+
+function BoxEasyNumberToNullableDouble
+(
+    inInNum:  number(30,15)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableDouble Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableDouble()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableDouble := Internal_BoxEasyNumberToNullableDouble( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableDouble() -> [$(BoxEasyNumberToNullableDouble)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableInt16
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableInt16" compiler "VisualC"
+
+function BoxEasyNumberToNullableInt16
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableInt16 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableInt16()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableInt16 := Internal_BoxEasyNumberToNullableInt16( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableInt16() -> [$(BoxEasyNumberToNullableInt16)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableInt32
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableInt32" compiler "VisualC"
+
+function BoxEasyNumberToNullableInt32
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableInt32 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableInt32()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableInt32 := Internal_BoxEasyNumberToNullableInt32( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableInt32() -> [$(BoxEasyNumberToNullableInt32)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableInt64
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableInt64" compiler "VisualC"
+
+function BoxEasyNumberToNullableInt64
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableInt64 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableInt64()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableInt64 := Internal_BoxEasyNumberToNullableInt64( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableInt64() -> [$(BoxEasyNumberToNullableInt64)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableSByte
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableSByte" compiler "VisualC"
+
+function BoxEasyNumberToNullableSByte
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableSByte Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableSByte()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableSByte := Internal_BoxEasyNumberToNullableSByte( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableSByte() -> [$(BoxEasyNumberToNullableSByte)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableSingle
+(
+    inInNum:  number(30,15) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableSingle" compiler "VisualC"
+
+function BoxEasyNumberToNullableSingle
+(
+    inInNum:  number(30,15)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableSingle Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableSingle()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableSingle := Internal_BoxEasyNumberToNullableSingle( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableSingle() -> [$(BoxEasyNumberToNullableSingle)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableTimeSpan
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableTimeSpan" compiler "VisualC"
+
+function BoxEasyNumberToNullableTimeSpan
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableTimeSpan Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableTimeSpan()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableTimeSpan := Internal_BoxEasyNumberToNullableTimeSpan( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableTimeSpan() -> [$(BoxEasyNumberToNullableTimeSpan)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableUInt16
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableUInt16" compiler "VisualC"
+
+function BoxEasyNumberToNullableUInt16
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableUInt16 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableUInt16()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableUInt16 := Internal_BoxEasyNumberToNullableUInt16( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableUInt16() -> [$(BoxEasyNumberToNullableUInt16)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableUInt32
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableUInt32" compiler "VisualC"
+
+function BoxEasyNumberToNullableUInt32
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableUInt32 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableUInt32()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableUInt32 := Internal_BoxEasyNumberToNullableUInt32( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableUInt32() -> [$(BoxEasyNumberToNullableUInt32)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToNullableUInt64
+(
+    inInNum:  number(18,0) as easy type
+        comment {The number value to box},
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToNullableUInt64" compiler "VisualC"
+
+function BoxEasyNumberToNullableUInt64
+(
+    inInNum:  number(18,0)
+        comment {The number value to box},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyNumberToNullableUInt64 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToNullableUInt64()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToNullableUInt64 := Internal_BoxEasyNumberToNullableUInt64( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToNullableUInt64() -> [$(BoxEasyNumberToNullableUInt64)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToSByte
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToSByte" compiler "VisualC"
+
+function BoxEasyNumberToSByte
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToSByte Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToSByte()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToSByte := Internal_BoxEasyNumberToSByte( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToSByte() -> [$(BoxEasyNumberToSByte)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToSingle
+(
+    inInNum:  number(18,7) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToSingle" compiler "VisualC"
+
+function BoxEasyNumberToSingle
+(
+    inInNum:  number(18,7)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToSingle Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToSingle()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToSingle := Internal_BoxEasyNumberToSingle( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToSingle() -> [$(BoxEasyNumberToSingle)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToTimeSpan
+(
+    inInSeconds:  number as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToTimeSpan" compiler "VisualC"
+
+function BoxEasyNumberToTimeSpan
+(
+    inInSeconds:  number
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToTimeSpan Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToTimeSpan()')
+   call Debug::ParamHighDetail('[IN ] in_seconds', inInSeconds)
+   BoxEasyNumberToTimeSpan := Internal_BoxEasyNumberToTimeSpan( inInSeconds , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToTimeSpan() -> [$(BoxEasyNumberToTimeSpan)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToUInt16
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToUInt16" compiler "VisualC"
+
+function BoxEasyNumberToUInt16
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToUInt16 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToUInt16()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToUInt16 := Internal_BoxEasyNumberToUInt16( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToUInt16() -> [$(BoxEasyNumberToUInt16)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToUInt32
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToUInt32" compiler "VisualC"
+
+function BoxEasyNumberToUInt32
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToUInt32 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToUInt32()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToUInt32 := Internal_BoxEasyNumberToUInt32( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToUInt32() -> [$(BoxEasyNumberToUInt32)]')
+}
+
+external session cdecl function Internal_BoxEasyNumberToUInt64
+(
+    inInNum:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyNumberToUInt64" compiler "VisualC"
+
+function BoxEasyNumberToUInt64
+(
+    inInNum:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyNumberToUInt64 Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyNumberToUInt64()')
+   call Debug::ParamHighDetail('[IN ] in_num', inInNum)
+   BoxEasyNumberToUInt64 := Internal_BoxEasyNumberToUInt64( inInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyNumberToUInt64() -> [$(BoxEasyNumberToUInt64)]')
+}
+
+external session cdecl function Internal_BoxEasyTextToChar
+(
+    itStr:  text as char*,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTextToChar" compiler "VisualC"
+
+function BoxEasyTextToChar
+(
+    itStr:  text
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyTextToChar Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTextToChar()')
+   call Debug::ParamHighDetail('[IN ] str', itStr)
+   BoxEasyTextToChar := Internal_BoxEasyTextToChar( itStr , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTextToChar() -> [$(BoxEasyTextToChar)]')
+}
+
+external session cdecl function Internal_BoxEasyTextToDecimal
+(
+    itInNum:  text as char*,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTextToDecimal" compiler "VisualC"
+
+function BoxEasyTextToDecimal
+(
+    itInNum:  text
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyTextToDecimal Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTextToDecimal()')
+   call Debug::ParamHighDetail('[IN ] in_num', itInNum)
+   BoxEasyTextToDecimal := Internal_BoxEasyTextToDecimal( itInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTextToDecimal() -> [$(BoxEasyTextToDecimal)]')
+}
+
+external session cdecl function Internal_BoxEasyTextToDouble
+(
+    itInNum:  text as char*,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTextToDouble" compiler "VisualC"
+
+function BoxEasyTextToDouble
+(
+    itInNum:  text
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyTextToDouble Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTextToDouble()')
+   call Debug::ParamHighDetail('[IN ] in_num', itInNum)
+   BoxEasyTextToDouble := Internal_BoxEasyTextToDouble( itInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTextToDouble() -> [$(BoxEasyTextToDouble)]')
+}
+
+external session cdecl function Internal_BoxEasyTextToNullableChar
+(
+    itInStr:  text as char*,
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTextToNullableChar" compiler "VisualC"
+
+function BoxEasyTextToNullableChar
+(
+    itInStr:  text
+        comment {},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyTextToNullableChar Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTextToNullableChar()')
+   call Debug::ParamHighDetail('[IN ] in_str', itInStr)
+   BoxEasyTextToNullableChar := Internal_BoxEasyTextToNullableChar( itInStr , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTextToNullableChar() -> [$(BoxEasyTextToNullableChar)]')
+}
+
+external session cdecl function Internal_BoxEasyTextToSingle
+(
+    itInNum:  text as char*,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTextToSingle" compiler "VisualC"
+
+function BoxEasyTextToSingle
+(
+    itInNum:  text
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyTextToSingle Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTextToSingle()')
+   call Debug::ParamHighDetail('[IN ] in_num', itInNum)
+   BoxEasyTextToSingle := Internal_BoxEasyTextToSingle( itInNum , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTextToSingle() -> [$(BoxEasyTextToSingle)]')
+}
+
+external session cdecl function Internal_BoxEasyTextToString
+(
+    itStr:  text as char*,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTextToString" compiler "VisualC"
+
+function BoxEasyTextToString
+(
+    itStr:  text
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyTextToString Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTextToString()')
+   call Debug::ParamHighDetail('[IN ] str', itStr)
+   BoxEasyTextToString := Internal_BoxEasyTextToString( itStr , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTextToString() -> [$(BoxEasyTextToString)]')
+}
+
+external session cdecl function Internal_BoxEasyTimeToDateTime
+(
+    itmInTime:  time as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTimeToDateTime" compiler "VisualC"
+
+function BoxEasyTimeToDateTime
+(
+    itmInTime:  time
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { BoxEasyTimeToDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTimeToDateTime()')
+   call Debug::ParamHighDetail('[IN ] in_time', itmInTime)
+   BoxEasyTimeToDateTime := Internal_BoxEasyTimeToDateTime( itmInTime , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTimeToDateTime() -> [$(BoxEasyTimeToDateTime)]')
+}
+
+external session cdecl function Internal_BoxEasyTimeToNullableDateTime
+(
+    itmInTime:  time as easy type,
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTimeToNullableDateTime" compiler "VisualC"
+
+function BoxEasyTimeToNullableDateTime
+(
+    itmInTime:  time
+        comment {},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyTimeToNullableDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTimeToNullableDateTime()')
+   call Debug::ParamHighDetail('[IN ] in_time', itmInTime)
+   BoxEasyTimeToNullableDateTime := Internal_BoxEasyTimeToNullableDateTime( itmInTime , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTimeToNullableDateTime() -> [$(BoxEasyTimeToNullableDateTime)]')
+}
+
+external session cdecl function Internal_BoxEasyTimeToNullableTimeSpan
+(
+    itmInTime:  time as easy type,
+    ref onOh:  number as unsigned long
+        comment {The returned Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "BoxEasyTimeToNullableTimeSpan" compiler "VisualC"
+
+function BoxEasyTimeToNullableTimeSpan
+(
+    itmInTime:  time
+        comment {},
+    ref onOh:  number
+        comment {The returned Object Handler.}
+)
+: number
+comment { BoxEasyTimeToNullableTimeSpan Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::BoxEasyTimeToNullableTimeSpan()')
+   call Debug::ParamHighDetail('[IN ] in_time', itmInTime)
+   BoxEasyTimeToNullableTimeSpan := Internal_BoxEasyTimeToNullableTimeSpan( itmInTime , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::BoxEasyTimeToNullableTimeSpan() -> [$(BoxEasyTimeToNullableTimeSpan)]')
+}
+
+external cdecl function Internal_CallGarbageCollector()
+: number as int
+comment {Explicitly calls the Garbage Collector of the CLR.}
+in "Net4ASLDll" named "CallGarbageCollector" compiler "VisualC"
+
+function CallGarbageCollector()
+: number
+comment {Explicitly calls the Garbage Collector of the CLR. CallGarbageCollector Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::CallGarbageCollector()')
+   CallGarbageCollector := Internal_CallGarbageCollector( )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::CallGarbageCollector() -> [$(CallGarbageCollector)]')
+}
+
+external session cdecl function Internal_ChangeAssemblyLoadPath
+(
+    itLoadpath:  text as char*
+        comment {The path for the assembly.}
+)
+: number as int
+comment {Change the Assembly load path (not the assembly).}
+in "Net4ASLDll" named "ChangeAssemblyLoadPath" compiler "VisualC"
+
+function ChangeAssemblyLoadPath
+(
+    itLoadpath:  text
+        comment {The path for the assembly.}
+)
+: number
+comment {Change the Assembly load path (not the assembly). ChangeAssemblyLoadPath Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::ChangeAssemblyLoadPath()')
+   call Debug::ParamHighDetail('[IN ] loadPath', itLoadpath)
+   ChangeAssemblyLoadPath := Internal_ChangeAssemblyLoadPath( itLoadpath )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::ChangeAssemblyLoadPath() -> [$(ChangeAssemblyLoadPath)]')
+}
+
+external session cdecl function Internal_CreateArray
+(
+    itLoadedassembly:  text as char*
+        comment {The name of the Assembly inicialized for net4asl},
+    itAssembly:  text as char*
+        comment {The name of the Assembly that has the object definition.},
+    itType:  text as char*
+        comment {The type of the object to create.},
+    inSize:  number(18,0) as easy type
+        comment {The size of the array to create.},
+    ref onOh:  number as unsigned long
+        comment {The created Array Handler.}
+)
+: number as int
+in "Net4ASLDll" named "CreateArray" compiler "VisualC"
+
+function CreateArray
+(
+    itLoadedassembly:  text
+        comment {The name of the Assembly inicialized for net4asl},
+    itAssembly:  text
+        comment {The name of the Assembly that has the object definition.},
+    itType:  text
+        comment {The type of the object to create.},
+    inSize:  number(18,0)
+        comment {The size of the array to create.},
+    ref onOh:  number
+        comment {The created Array Handler.}
+)
+: number
+comment { CreateArray Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::CreateArray()')
+   call Debug::ParamHighDetail('[IN ] loadedAssembly', itLoadedassembly)
+   call Debug::ParamHighDetail('[IN ] assembly', itAssembly)
+   call Debug::ParamHighDetail('[IN ] type', itType)
+   call Debug::ParamHighDetail('[IN ] size', inSize)
+   CreateArray := Internal_CreateArray( itLoadedassembly , itAssembly , itType , inSize , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::CreateArray() -> [$(CreateArray)]')
+}
+
+external session cdecl function Internal_CreateEnum
+(
+    itAssembly:  text as char*
+        comment {The name of the Assembly that has the object definition.},
+    itType:  text as char*
+        comment {The type of the enum to create.},
+    inValue:  number(18,0) as easy type,
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "CreateEnum" compiler "VisualC"
+
+function CreateEnum
+(
+    itAssembly:  text
+        comment {The name of the Assembly that has the object definition.},
+    itType:  text
+        comment {The type of the enum to create.},
+    inValue:  number(18,0)
+        comment {},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { CreateEnum Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::CreateEnum()')
+   call Debug::ParamHighDetail('[IN ] assembly', itAssembly)
+   call Debug::ParamHighDetail('[IN ] type', itType)
+   call Debug::ParamHighDetail('[IN ] value', inValue)
+   CreateEnum := Internal_CreateEnum( itAssembly , itType , inValue , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::CreateEnum() -> [$(CreateEnum)]')
+}
+
+external session cdecl function Internal_CreateObject
+(
+    itAssembly:  text as char*
+        comment {The name of the Assembly that has the object definition.},
+    itType:  text as char*
+        comment {The type of the object to create.},
+    inAh:  number as unsigned long,
+    ref onOh:  number as unsigned long
+        comment {The created Object Handler.},
+    ref onEh:  number as unsigned long
+)
+: number as int
+in "Net4ASLDll" named "CreateObject" compiler "VisualC"
+
+function CreateObject
+(
+    itAssembly:  text
+        comment {The name of the Assembly that has the object definition.},
+    itType:  text
+        comment {The type of the object to create.},
+    inAh:  number
+        comment {},
+    ref onOh:  number
+        comment {The created Object Handler.},
+    ref onEh:  number
+        comment {}
+)
+: number
+comment { CreateObject Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::CreateObject()')
+   call Debug::ParamHighDetail('[IN ] assembly', itAssembly)
+   call Debug::ParamHighDetail('[IN ] type', itType)
+   call Debug::ParamHighDetail('[IN ] ah', inAh)
+   CreateObject := Internal_CreateObject( itAssembly , itType , inAh , onOh , onEh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::ParamHighDetail('[OUT] eh', onEh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::CreateObject() -> [$(CreateObject)]')
+}
+
+external session cdecl function Internal_EndSession()
+: number as int
+in "Net4ASLDll" named "EndSession" compiler "VisualC"
+
+function EndSession()
+: number
+comment { EndSession Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::EndSession()')
+   EndSession := Internal_EndSession( )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::EndSession() -> [$(EndSession)]')
+}
+
+external cdecl function Internal_ErrorMessage
+(
+    inCode:  number as int
+        comment {The code of the error message to retrieve.}
+)
+: text as char*
+comment {Gets the error message correspondent to a given code.}
+in "Net4ASLDll" named "ErrorMessage" compiler "VisualC"
+
+function ErrorMessage
+(
+    inCode:  number
+        comment {The code of the error message to retrieve.}
+)
+: text
+comment {Gets the error message correspondent to a given code. ErrorMessage Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::ErrorMessage()')
+   call Debug::ParamHighDetail('[IN ] code', inCode)
+   ErrorMessage := Internal_ErrorMessage( inCode )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::ErrorMessage() -> [$(ErrorMessage)]')
+}
+
+external session cdecl function Internal_ExceptionDetails
+(
+    inEh:  number as unsigned long,
+    ref otMessage:  text as char*,
+    ref otStacktrace:  text as char*,
+    ref onInnerexception:  number as unsigned long
+)
+: number as int
+in "Net4ASLDll" named "ExceptionDetails" compiler "VisualC"
+
+function ExceptionDetails
+(
+    inEh:  number
+        comment {},
+    ref otMessage:  text
+        comment {},
+    ref otStacktrace:  text
+        comment {},
+    ref onInnerexception:  number
+        comment {}
+)
+: number
+comment { ExceptionDetails Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::ExceptionDetails()')
+   call Debug::ParamHighDetail('[IN ] eh', inEh)
+   ExceptionDetails := Internal_ExceptionDetails( inEh , otMessage , otStacktrace , onInnerexception )
+   call Debug::ParamHighDetail('[OUT] message', otMessage)
+   call Debug::ParamHighDetail('[OUT] stackTrace', otStacktrace)
+   call Debug::ParamHighDetail('[OUT] innerException', onInnerexception)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::ExceptionDetails() -> [$(ExceptionDetails)]')
+}
+
+external session cdecl function Internal_GetArrayLength
+(
+    inAh:  number as unsigned long
+        comment {The Array Handler.},
+    ref onLength:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "GetArrayLength" compiler "VisualC"
+
+function GetArrayLength
+(
+    inAh:  number
+        comment {The Array Handler.},
+    ref onLength:  number(18,0)
+        comment {}
+)
+: number
+comment { GetArrayLength Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::GetArrayLength()')
+   call Debug::ParamHighDetail('[IN ] ah', inAh)
+   GetArrayLength := Internal_GetArrayLength( inAh , onLength )
+   call Debug::ParamHighDetail('[OUT] length', onLength)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::GetArrayLength() -> [$(GetArrayLength)]')
+}
+
+external session cdecl function Internal_GetArrayValue
+(
+    inAh:  number as unsigned long
+        comment {The Array Handler.},
+    inPosition:  number(18,0) as easy type
+        comment {The position (0 based) within the array of the value to get.},
+    ref onOh:  number as unsigned long
+        comment {The Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "GetArrayValue" compiler "VisualC"
+
+function GetArrayValue
+(
+    inAh:  number
+        comment {The Array Handler.},
+    inPosition:  number(18,0)
+        comment {The position (0 based) within the array of the value to get.},
+    ref onOh:  number
+        comment {The Object Handler.}
+)
+: number
+comment { GetArrayValue Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::GetArrayValue()')
+   call Debug::ParamHighDetail('[IN ] ah', inAh)
+   call Debug::ParamHighDetail('[IN ] position', inPosition)
+   GetArrayValue := Internal_GetArrayValue( inAh , inPosition , onOh )
+   call Debug::ParamHighDetail('[OUT] oh', onOh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::GetArrayValue() -> [$(GetArrayValue)]')
+}
+
+external session cdecl function Internal_GetEnumValue
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onValue:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "GetEnumValue" compiler "VisualC"
+
+function GetEnumValue
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onValue:  number(18,0)
+        comment {}
+)
+: number
+comment { GetEnumValue Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::GetEnumValue()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   GetEnumValue := Internal_GetEnumValue( inOh , onValue )
+   call Debug::ParamHighDetail('[OUT] value', onValue)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::GetEnumValue() -> [$(GetEnumValue)]')
+}
+
+external session cdecl function Internal_GetField
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    itMembername:  text as char*,
+    ref onRh:  number as unsigned long
+)
+: number as int
+in "Net4ASLDll" named "GetField" compiler "VisualC"
+
+function GetField
+(
+    inOh:  number
+        comment {The Object Handler.},
+    itMembername:  text
+        comment {},
+    ref onRh:  number
+        comment {}
+)
+: number
+comment { GetField Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::GetField()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   call Debug::ParamHighDetail('[IN ] memberName', itMembername)
+   GetField := Internal_GetField( inOh , itMembername , onRh )
+   call Debug::ParamHighDetail('[OUT] rh', onRh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::GetField() -> [$(GetField)]')
+}
+
+external session cdecl function Internal_GetProperty
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    itMembername:  text as char*,
+    ref onRh:  number as unsigned long,
+    ref onEh:  number as unsigned long
+)
+: number as int
+in "Net4ASLDll" named "GetProperty" compiler "VisualC"
+
+function GetProperty
+(
+    inOh:  number
+        comment {The Object Handler.},
+    itMembername:  text
+        comment {},
+    ref onRh:  number
+        comment {},
+    ref onEh:  number
+        comment {}
+)
+: number
+comment { GetProperty Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::GetProperty()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   call Debug::ParamHighDetail('[IN ] memberName', itMembername)
+   GetProperty := Internal_GetProperty( inOh , itMembername , onRh , onEh )
+   call Debug::ParamHighDetail('[OUT] rh', onRh)
+   call Debug::ParamHighDetail('[OUT] eh', onEh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::GetProperty() -> [$(GetProperty)]')
+}
+
+external session cdecl function Internal_GetType
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otStr:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "GetType" compiler "VisualC"
+
+function GetType
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otStr:  text
+        comment {}
+)
+: number
+comment { GetType Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::GetType()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   GetType := Internal_GetType( inOh , otStr )
+   call Debug::ParamHighDetail('[OUT] str', otStr)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::GetType() -> [$(GetType)]')
+}
+
+external session cdecl function Internal_Invoke
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    itMembername:  text as char*,
+    inAh:  number as unsigned long,
+    ref onRh:  number as unsigned long,
+    ref onEh:  number as unsigned long
+)
+: number as int
+in "Net4ASLDll" named "Invoke" compiler "VisualC"
+
+function Invoke
+(
+    inOh:  number
+        comment {The Object Handler.},
+    itMembername:  text
+        comment {},
+    inAh:  number
+        comment {},
+    ref onRh:  number
+        comment {},
+    ref onEh:  number
+        comment {}
+)
+: number
+comment { Invoke Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::Invoke()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   call Debug::ParamHighDetail('[IN ] memberName', itMembername)
+   call Debug::ParamHighDetail('[IN ] ah', inAh)
+   Invoke := Internal_Invoke( inOh , itMembername , inAh , onRh , onEh )
+   call Debug::ParamHighDetail('[OUT] rh', onRh)
+   call Debug::ParamHighDetail('[OUT] eh', onEh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::Invoke() -> [$(Invoke)]')
+}
+
+external session cdecl function Internal_LoadAssembly
+(
+    itName:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "LoadAssembly" compiler "VisualC"
+
+function LoadAssembly
+(
+    itName:  text
+        comment {}
+)
+: number
+comment { LoadAssembly Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::LoadAssembly()')
+   call Debug::ParamHighDetail('[IN ] name', itName)
+   LoadAssembly := Internal_LoadAssembly( itName )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::LoadAssembly() -> [$(LoadAssembly)]')
+}
+
+external session cdecl function Internal_ReleaseReference
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler to release.}
+)
+: number as int
+in "Net4ASLDll" named "ReleaseReference" compiler "VisualC"
+
+function ReleaseReference
+(
+    inOh:  number
+        comment {The Object Handler to release.}
+)
+: number
+comment { ReleaseReference Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::ReleaseReference()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   ReleaseReference := Internal_ReleaseReference( inOh )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::ReleaseReference() -> [$(ReleaseReference)]')
+}
+
+external session cdecl function Internal_RestartDebug
+(
+    itDirectory:  text as char*
+        comment {The Debug Directory.},
+    itPrefix:  text as char*
+        comment {The Prefix for the NET4ASL Log File.},
+    inDetail:  number as easy type
+        comment {The Debug Detail of the NET4ASL Log File.},
+    inFlags:  number as easy type
+        comment {The Debug Flags for the NET4ASL Log.}
+)
+: number as int
+in "Net4ASLDll" named "RestartDebug" compiler "VisualC"
+
+function RestartDebug
+(
+    itDirectory:  text
+        comment {The Debug Directory.},
+    itPrefix:  text
+        comment {The Prefix for the NET4ASL Log File.},
+    inDetail:  number
+        comment {The Debug Detail of the NET4ASL Log File.},
+    inFlags:  number
+        comment {The Debug Flags for the NET4ASL Log.}
+)
+: number
+comment { RestartDebug Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::RestartDebug()')
+   call Debug::ParamHighDetail('[IN ] directory', itDirectory)
+   call Debug::ParamHighDetail('[IN ] prefix', itPrefix)
+   call Debug::ParamHighDetail('[IN ] detail', inDetail)
+   call Debug::ParamHighDetail('[IN ] flags', inFlags)
+   RestartDebug := Internal_RestartDebug( itDirectory , itPrefix , inDetail , inFlags )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::RestartDebug() -> [$(RestartDebug)]')
+}
+
+external session cdecl function Internal_SetArrayValue
+(
+    inAh:  number as unsigned long
+        comment {The Array Handler.},
+    inPosition:  number(18,0) as easy type
+        comment {The position (0 based) within the array of the value to set.},
+    inOh:  number as unsigned long
+        comment {The Value Object Handler.}
+)
+: number as int
+in "Net4ASLDll" named "SetArrayValue" compiler "VisualC"
+
+function SetArrayValue
+(
+    inAh:  number
+        comment {The Array Handler.},
+    inPosition:  number(18,0)
+        comment {The position (0 based) within the array of the value to set.},
+    inOh:  number
+        comment {The Value Object Handler.}
+)
+: number
+comment { SetArrayValue Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::SetArrayValue()')
+   call Debug::ParamHighDetail('[IN ] ah', inAh)
+   call Debug::ParamHighDetail('[IN ] position', inPosition)
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   SetArrayValue := Internal_SetArrayValue( inAh , inPosition , inOh )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::SetArrayValue() -> [$(SetArrayValue)]')
+}
+
+external session cdecl function Internal_SetField
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    itMembername:  text as char*,
+    inVh:  number as unsigned long
+)
+: number as int
+in "Net4ASLDll" named "SetField" compiler "VisualC"
+
+function SetField
+(
+    inOh:  number
+        comment {The Object Handler.},
+    itMembername:  text
+        comment {},
+    inVh:  number
+        comment {}
+)
+: number
+comment { SetField Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::SetField()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   call Debug::ParamHighDetail('[IN ] memberName', itMembername)
+   call Debug::ParamHighDetail('[IN ] vh', inVh)
+   SetField := Internal_SetField( inOh , itMembername , inVh )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::SetField() -> [$(SetField)]')
+}
+
+external session cdecl function Internal_SetProperty
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    itMembername:  text as char*,
+    inVh:  number as unsigned long,
+    ref onEh:  number as unsigned long
+)
+: number as int
+in "Net4ASLDll" named "SetProperty" compiler "VisualC"
+
+function SetProperty
+(
+    inOh:  number
+        comment {The Object Handler.},
+    itMembername:  text
+        comment {},
+    inVh:  number
+        comment {},
+    ref onEh:  number
+        comment {}
+)
+: number
+comment { SetProperty Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::SetProperty()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   call Debug::ParamHighDetail('[IN ] memberName', itMembername)
+   call Debug::ParamHighDetail('[IN ] vh', inVh)
+   SetProperty := Internal_SetProperty( inOh , itMembername , inVh , onEh )
+   call Debug::ParamHighDetail('[OUT] eh', onEh)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::SetProperty() -> [$(SetProperty)]')
+}
+
+external session cdecl function Internal_StartSession()
+: number as int
+in "Net4ASLDll" named "StartSession" compiler "VisualC"
+
+function StartSession()
+: number
+comment { StartSession Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::StartSession()')
+   StartSession := Internal_StartSession( )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::StartSession() -> [$(StartSession)]')
+}
+
+external session cdecl function Internal_ToString
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otStr:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "ToString" compiler "VisualC"
+
+function ToString
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otStr:  text
+        comment {}
+)
+: number
+comment { ToString Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::ToString()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   ToString := Internal_ToString( inOh , otStr )
+   call Debug::ParamHighDetail('[OUT] str', otStr)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::ToString() -> [$(ToString)]')
+}
+
+external session cdecl function Internal_UnboxBooleanToEasyBoolean
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref obOutBool:  boolean as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxBooleanToEasyBoolean" compiler "VisualC"
+
+function UnboxBooleanToEasyBoolean
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref obOutBool:  boolean
+        comment {}
+)
+: number
+comment { UnboxBooleanToEasyBoolean Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxBooleanToEasyBoolean()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxBooleanToEasyBoolean := Internal_UnboxBooleanToEasyBoolean( inOh , obOutBool )
+   call Debug::ParamHighDetail('[OUT] out_bool', obOutBool)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxBooleanToEasyBoolean() -> [$(UnboxBooleanToEasyBoolean)]')
+}
+
+external session cdecl function Internal_UnboxByteToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxByteToEasyNumber" compiler "VisualC"
+
+function UnboxByteToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxByteToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxByteToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxByteToEasyNumber := Internal_UnboxByteToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxByteToEasyNumber() -> [$(UnboxByteToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxCharToEasyText
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otStr:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "UnboxCharToEasyText" compiler "VisualC"
+
+function UnboxCharToEasyText
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otStr:  text
+        comment {}
+)
+: number
+comment { UnboxCharToEasyText Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxCharToEasyText()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxCharToEasyText := Internal_UnboxCharToEasyText( inOh , otStr )
+   call Debug::ParamHighDetail('[OUT] str', otStr)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxCharToEasyText() -> [$(UnboxCharToEasyText)]')
+}
+
+external session cdecl function Internal_UnboxDateTimeToEasyDate
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref odOutDate:  date as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDateTimeToEasyDate" compiler "VisualC"
+
+function UnboxDateTimeToEasyDate
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref odOutDate:  date
+        comment {}
+)
+: number
+comment { UnboxDateTimeToEasyDate Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDateTimeToEasyDate()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDateTimeToEasyDate := Internal_UnboxDateTimeToEasyDate( inOh , odOutDate )
+   call Debug::ParamHighDetail('[OUT] out_date', odOutDate)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDateTimeToEasyDate() -> [$(UnboxDateTimeToEasyDate)]')
+}
+
+external session cdecl function Internal_UnboxDateTimeToEasyDateTime
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDateTimeToEasyDateTime" compiler "VisualC"
+
+function UnboxDateTimeToEasyDateTime
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime
+        comment {}
+)
+: number
+comment { UnboxDateTimeToEasyDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDateTimeToEasyDateTime()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDateTimeToEasyDateTime := Internal_UnboxDateTimeToEasyDateTime( inOh , odtOutDatetime )
+   call Debug::ParamHighDetail('[OUT] out_datetime', odtOutDatetime)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDateTimeToEasyDateTime() -> [$(UnboxDateTimeToEasyDateTime)]')
+}
+
+external session cdecl function Internal_UnboxDateTimeToEasyTime
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otmOutTime:  time as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDateTimeToEasyTime" compiler "VisualC"
+
+function UnboxDateTimeToEasyTime
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otmOutTime:  time
+        comment {}
+)
+: number
+comment { UnboxDateTimeToEasyTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDateTimeToEasyTime()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDateTimeToEasyTime := Internal_UnboxDateTimeToEasyTime( inOh , otmOutTime )
+   call Debug::ParamHighDetail('[OUT] out_time', otmOutTime)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDateTimeToEasyTime() -> [$(UnboxDateTimeToEasyTime)]')
+}
+
+external session cdecl function Internal_UnboxDecimal0DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal0DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal0DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxDecimal0DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal0DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal0DToEasyNumber := Internal_UnboxDecimal0DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal0DToEasyNumber() -> [$(UnboxDecimal0DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal10DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,10) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal10DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal10DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,10)
+        comment {}
+)
+: number
+comment { UnboxDecimal10DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal10DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal10DToEasyNumber := Internal_UnboxDecimal10DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal10DToEasyNumber() -> [$(UnboxDecimal10DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal11DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,11) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal11DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal11DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,11)
+        comment {}
+)
+: number
+comment { UnboxDecimal11DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal11DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal11DToEasyNumber := Internal_UnboxDecimal11DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal11DToEasyNumber() -> [$(UnboxDecimal11DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal12DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,12) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal12DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal12DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,12)
+        comment {}
+)
+: number
+comment { UnboxDecimal12DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal12DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal12DToEasyNumber := Internal_UnboxDecimal12DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal12DToEasyNumber() -> [$(UnboxDecimal12DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal13DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,13) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal13DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal13DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,13)
+        comment {}
+)
+: number
+comment { UnboxDecimal13DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal13DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal13DToEasyNumber := Internal_UnboxDecimal13DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal13DToEasyNumber() -> [$(UnboxDecimal13DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal14DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,14) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal14DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal14DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,14)
+        comment {}
+)
+: number
+comment { UnboxDecimal14DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal14DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal14DToEasyNumber := Internal_UnboxDecimal14DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal14DToEasyNumber() -> [$(UnboxDecimal14DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal15DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal15DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal15DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,15)
+        comment {}
+)
+: number
+comment { UnboxDecimal15DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal15DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal15DToEasyNumber := Internal_UnboxDecimal15DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal15DToEasyNumber() -> [$(UnboxDecimal15DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal16DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,16) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal16DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal16DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,16)
+        comment {}
+)
+: number
+comment { UnboxDecimal16DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal16DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal16DToEasyNumber := Internal_UnboxDecimal16DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal16DToEasyNumber() -> [$(UnboxDecimal16DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal17DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,17) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal17DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal17DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,17)
+        comment {}
+)
+: number
+comment { UnboxDecimal17DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal17DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal17DToEasyNumber := Internal_UnboxDecimal17DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal17DToEasyNumber() -> [$(UnboxDecimal17DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal1DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,1) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal1DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal1DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,1)
+        comment {}
+)
+: number
+comment { UnboxDecimal1DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal1DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal1DToEasyNumber := Internal_UnboxDecimal1DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal1DToEasyNumber() -> [$(UnboxDecimal1DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal2DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,2) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal2DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal2DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,2)
+        comment {}
+)
+: number
+comment { UnboxDecimal2DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal2DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal2DToEasyNumber := Internal_UnboxDecimal2DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal2DToEasyNumber() -> [$(UnboxDecimal2DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal3DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,3) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal3DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal3DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,3)
+        comment {}
+)
+: number
+comment { UnboxDecimal3DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal3DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal3DToEasyNumber := Internal_UnboxDecimal3DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal3DToEasyNumber() -> [$(UnboxDecimal3DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal4DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,4) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal4DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal4DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,4)
+        comment {}
+)
+: number
+comment { UnboxDecimal4DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal4DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal4DToEasyNumber := Internal_UnboxDecimal4DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal4DToEasyNumber() -> [$(UnboxDecimal4DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal5DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,5) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal5DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal5DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,5)
+        comment {}
+)
+: number
+comment { UnboxDecimal5DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal5DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal5DToEasyNumber := Internal_UnboxDecimal5DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal5DToEasyNumber() -> [$(UnboxDecimal5DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal6DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,6) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal6DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal6DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,6)
+        comment {}
+)
+: number
+comment { UnboxDecimal6DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal6DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal6DToEasyNumber := Internal_UnboxDecimal6DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal6DToEasyNumber() -> [$(UnboxDecimal6DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal7DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,7) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal7DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal7DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,7)
+        comment {}
+)
+: number
+comment { UnboxDecimal7DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal7DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal7DToEasyNumber := Internal_UnboxDecimal7DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal7DToEasyNumber() -> [$(UnboxDecimal7DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal8DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,8) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal8DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal8DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,8)
+        comment {}
+)
+: number
+comment { UnboxDecimal8DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal8DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal8DToEasyNumber := Internal_UnboxDecimal8DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal8DToEasyNumber() -> [$(UnboxDecimal8DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimal9DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,9) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimal9DToEasyNumber" compiler "VisualC"
+
+function UnboxDecimal9DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,9)
+        comment {}
+)
+: number
+comment { UnboxDecimal9DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimal9DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimal9DToEasyNumber := Internal_UnboxDecimal9DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimal9DToEasyNumber() -> [$(UnboxDecimal9DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimalToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimalToEasyNumber" compiler "VisualC"
+
+function UnboxDecimalToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15)
+        comment {}
+)
+: number
+comment { UnboxDecimalToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimalToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimalToEasyNumber := Internal_UnboxDecimalToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimalToEasyNumber() -> [$(UnboxDecimalToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDecimalToEasyText
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otOutNum:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "UnboxDecimalToEasyText" compiler "VisualC"
+
+function UnboxDecimalToEasyText
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otOutNum:  text
+        comment {}
+)
+: number
+comment { UnboxDecimalToEasyText Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDecimalToEasyText()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDecimalToEasyText := Internal_UnboxDecimalToEasyText( inOh , otOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', otOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDecimalToEasyText() -> [$(UnboxDecimalToEasyText)]')
+}
+
+external session cdecl function Internal_UnboxDouble0DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble0DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble0DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxDouble0DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble0DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble0DToEasyNumber := Internal_UnboxDouble0DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble0DToEasyNumber() -> [$(UnboxDouble0DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble10DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,10) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble10DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble10DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,10)
+        comment {}
+)
+: number
+comment { UnboxDouble10DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble10DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble10DToEasyNumber := Internal_UnboxDouble10DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble10DToEasyNumber() -> [$(UnboxDouble10DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble11DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,11) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble11DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble11DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,11)
+        comment {}
+)
+: number
+comment { UnboxDouble11DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble11DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble11DToEasyNumber := Internal_UnboxDouble11DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble11DToEasyNumber() -> [$(UnboxDouble11DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble12DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,12) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble12DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble12DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,12)
+        comment {}
+)
+: number
+comment { UnboxDouble12DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble12DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble12DToEasyNumber := Internal_UnboxDouble12DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble12DToEasyNumber() -> [$(UnboxDouble12DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble13DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,13) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble13DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble13DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,13)
+        comment {}
+)
+: number
+comment { UnboxDouble13DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble13DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble13DToEasyNumber := Internal_UnboxDouble13DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble13DToEasyNumber() -> [$(UnboxDouble13DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble14DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,14) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble14DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble14DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,14)
+        comment {}
+)
+: number
+comment { UnboxDouble14DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble14DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble14DToEasyNumber := Internal_UnboxDouble14DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble14DToEasyNumber() -> [$(UnboxDouble14DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble15DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble15DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble15DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,15)
+        comment {}
+)
+: number
+comment { UnboxDouble15DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble15DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble15DToEasyNumber := Internal_UnboxDouble15DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble15DToEasyNumber() -> [$(UnboxDouble15DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble16DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,16) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble16DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble16DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,16)
+        comment {}
+)
+: number
+comment { UnboxDouble16DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble16DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble16DToEasyNumber := Internal_UnboxDouble16DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble16DToEasyNumber() -> [$(UnboxDouble16DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble17DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,17) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble17DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble17DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,17)
+        comment {}
+)
+: number
+comment { UnboxDouble17DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble17DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble17DToEasyNumber := Internal_UnboxDouble17DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble17DToEasyNumber() -> [$(UnboxDouble17DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble1DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,1) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble1DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble1DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,1)
+        comment {}
+)
+: number
+comment { UnboxDouble1DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble1DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble1DToEasyNumber := Internal_UnboxDouble1DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble1DToEasyNumber() -> [$(UnboxDouble1DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble2DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,2) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble2DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble2DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,2)
+        comment {}
+)
+: number
+comment { UnboxDouble2DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble2DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble2DToEasyNumber := Internal_UnboxDouble2DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble2DToEasyNumber() -> [$(UnboxDouble2DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble3DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,3) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble3DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble3DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,3)
+        comment {}
+)
+: number
+comment { UnboxDouble3DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble3DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble3DToEasyNumber := Internal_UnboxDouble3DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble3DToEasyNumber() -> [$(UnboxDouble3DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble4DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,4) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble4DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble4DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,4)
+        comment {}
+)
+: number
+comment { UnboxDouble4DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble4DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble4DToEasyNumber := Internal_UnboxDouble4DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble4DToEasyNumber() -> [$(UnboxDouble4DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble5DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,5) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble5DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble5DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,5)
+        comment {}
+)
+: number
+comment { UnboxDouble5DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble5DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble5DToEasyNumber := Internal_UnboxDouble5DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble5DToEasyNumber() -> [$(UnboxDouble5DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble6DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,6) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble6DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble6DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,6)
+        comment {}
+)
+: number
+comment { UnboxDouble6DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble6DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble6DToEasyNumber := Internal_UnboxDouble6DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble6DToEasyNumber() -> [$(UnboxDouble6DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble7DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,7) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble7DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble7DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,7)
+        comment {}
+)
+: number
+comment { UnboxDouble7DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble7DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble7DToEasyNumber := Internal_UnboxDouble7DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble7DToEasyNumber() -> [$(UnboxDouble7DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble8DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,8) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble8DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble8DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,8)
+        comment {}
+)
+: number
+comment { UnboxDouble8DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble8DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble8DToEasyNumber := Internal_UnboxDouble8DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble8DToEasyNumber() -> [$(UnboxDouble8DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDouble9DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,9) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDouble9DToEasyNumber" compiler "VisualC"
+
+function UnboxDouble9DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,9)
+        comment {}
+)
+: number
+comment { UnboxDouble9DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDouble9DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDouble9DToEasyNumber := Internal_UnboxDouble9DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDouble9DToEasyNumber() -> [$(UnboxDouble9DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDoubleToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxDoubleToEasyNumber" compiler "VisualC"
+
+function UnboxDoubleToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15)
+        comment {}
+)
+: number
+comment { UnboxDoubleToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDoubleToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDoubleToEasyNumber := Internal_UnboxDoubleToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDoubleToEasyNumber() -> [$(UnboxDoubleToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxDoubleToEasyText
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otOutNum:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "UnboxDoubleToEasyText" compiler "VisualC"
+
+function UnboxDoubleToEasyText
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otOutNum:  text
+        comment {}
+)
+: number
+comment { UnboxDoubleToEasyText Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxDoubleToEasyText()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxDoubleToEasyText := Internal_UnboxDoubleToEasyText( inOh , otOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', otOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxDoubleToEasyText() -> [$(UnboxDoubleToEasyText)]')
+}
+
+external session cdecl function Internal_UnboxInt16ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxInt16ToEasyNumber" compiler "VisualC"
+
+function UnboxInt16ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxInt16ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxInt16ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxInt16ToEasyNumber := Internal_UnboxInt16ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxInt16ToEasyNumber() -> [$(UnboxInt16ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxInt32ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxInt32ToEasyNumber" compiler "VisualC"
+
+function UnboxInt32ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxInt32ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxInt32ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxInt32ToEasyNumber := Internal_UnboxInt32ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxInt32ToEasyNumber() -> [$(UnboxInt32ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxInt64ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxInt64ToEasyNumber" compiler "VisualC"
+
+function UnboxInt64ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxInt64ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxInt64ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxInt64ToEasyNumber := Internal_UnboxInt64ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxInt64ToEasyNumber() -> [$(UnboxInt64ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableBooleanToEasyBoolean
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref obOutBool:  boolean as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableBooleanToEasyBoolean" compiler "VisualC"
+
+function UnboxNullableBooleanToEasyBoolean
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref obOutBool:  boolean
+        comment {}
+)
+: number
+comment { UnboxNullableBooleanToEasyBoolean Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableBooleanToEasyBoolean()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableBooleanToEasyBoolean := Internal_UnboxNullableBooleanToEasyBoolean( inOh , obOutBool )
+   call Debug::ParamHighDetail('[OUT] out_bool', obOutBool)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableBooleanToEasyBoolean() -> [$(UnboxNullableBooleanToEasyBoolean)]')
+}
+
+external session cdecl function Internal_UnboxNullableBooleanToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableBooleanToEasyNumber" compiler "VisualC"
+
+function UnboxNullableBooleanToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableBooleanToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableBooleanToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableBooleanToEasyNumber := Internal_UnboxNullableBooleanToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableBooleanToEasyNumber() -> [$(UnboxNullableBooleanToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableByteToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableByteToEasyNumber" compiler "VisualC"
+
+function UnboxNullableByteToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableByteToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableByteToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableByteToEasyNumber := Internal_UnboxNullableByteToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableByteToEasyNumber() -> [$(UnboxNullableByteToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableCharToEasyText
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otOutStr:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableCharToEasyText" compiler "VisualC"
+
+function UnboxNullableCharToEasyText
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otOutStr:  text
+        comment {}
+)
+: number
+comment { UnboxNullableCharToEasyText Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableCharToEasyText()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableCharToEasyText := Internal_UnboxNullableCharToEasyText( inOh , otOutStr )
+   call Debug::ParamHighDetail('[OUT] out_str', otOutStr)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableCharToEasyText() -> [$(UnboxNullableCharToEasyText)]')
+}
+
+external session cdecl function Internal_UnboxNullableDateTimeToEasyDate
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref odOutDate:  date as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableDateTimeToEasyDate" compiler "VisualC"
+
+function UnboxNullableDateTimeToEasyDate
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref odOutDate:  date
+        comment {}
+)
+: number
+comment { UnboxNullableDateTimeToEasyDate Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableDateTimeToEasyDate()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableDateTimeToEasyDate := Internal_UnboxNullableDateTimeToEasyDate( inOh , odOutDate )
+   call Debug::ParamHighDetail('[OUT] out_date', odOutDate)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableDateTimeToEasyDate() -> [$(UnboxNullableDateTimeToEasyDate)]')
+}
+
+external session cdecl function Internal_UnboxNullableDateTimeToEasyDateTime
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableDateTimeToEasyDateTime" compiler "VisualC"
+
+function UnboxNullableDateTimeToEasyDateTime
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime
+        comment {}
+)
+: number
+comment { UnboxNullableDateTimeToEasyDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableDateTimeToEasyDateTime()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableDateTimeToEasyDateTime := Internal_UnboxNullableDateTimeToEasyDateTime( inOh , odtOutDatetime )
+   call Debug::ParamHighDetail('[OUT] out_datetime', odtOutDatetime)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableDateTimeToEasyDateTime() -> [$(UnboxNullableDateTimeToEasyDateTime)]')
+}
+
+external session cdecl function Internal_UnboxNullableDateTimeToEasyTime
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otmOutTime:  time as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableDateTimeToEasyTime" compiler "VisualC"
+
+function UnboxNullableDateTimeToEasyTime
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otmOutTime:  time
+        comment {}
+)
+: number
+comment { UnboxNullableDateTimeToEasyTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableDateTimeToEasyTime()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableDateTimeToEasyTime := Internal_UnboxNullableDateTimeToEasyTime( inOh , otmOutTime )
+   call Debug::ParamHighDetail('[OUT] out_time', otmOutTime)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableDateTimeToEasyTime() -> [$(UnboxNullableDateTimeToEasyTime)]')
+}
+
+external session cdecl function Internal_UnboxNullableDecimalToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableDecimalToEasyNumber" compiler "VisualC"
+
+function UnboxNullableDecimalToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15)
+        comment {}
+)
+: number
+comment { UnboxNullableDecimalToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableDecimalToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableDecimalToEasyNumber := Internal_UnboxNullableDecimalToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableDecimalToEasyNumber() -> [$(UnboxNullableDecimalToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableDoubleToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableDoubleToEasyNumber" compiler "VisualC"
+
+function UnboxNullableDoubleToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15)
+        comment {}
+)
+: number
+comment { UnboxNullableDoubleToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableDoubleToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableDoubleToEasyNumber := Internal_UnboxNullableDoubleToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableDoubleToEasyNumber() -> [$(UnboxNullableDoubleToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableInt16ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableInt16ToEasyNumber" compiler "VisualC"
+
+function UnboxNullableInt16ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableInt16ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableInt16ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableInt16ToEasyNumber := Internal_UnboxNullableInt16ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableInt16ToEasyNumber() -> [$(UnboxNullableInt16ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableInt32ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableInt32ToEasyNumber" compiler "VisualC"
+
+function UnboxNullableInt32ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableInt32ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableInt32ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableInt32ToEasyNumber := Internal_UnboxNullableInt32ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableInt32ToEasyNumber() -> [$(UnboxNullableInt32ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableInt64ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableInt64ToEasyNumber" compiler "VisualC"
+
+function UnboxNullableInt64ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableInt64ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableInt64ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableInt64ToEasyNumber := Internal_UnboxNullableInt64ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableInt64ToEasyNumber() -> [$(UnboxNullableInt64ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableSByteToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableSByteToEasyNumber" compiler "VisualC"
+
+function UnboxNullableSByteToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableSByteToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableSByteToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableSByteToEasyNumber := Internal_UnboxNullableSByteToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableSByteToEasyNumber() -> [$(UnboxNullableSByteToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableSingleToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableSingleToEasyNumber" compiler "VisualC"
+
+function UnboxNullableSingleToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15)
+        comment {}
+)
+: number
+comment { UnboxNullableSingleToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableSingleToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableSingleToEasyNumber := Internal_UnboxNullableSingleToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableSingleToEasyNumber() -> [$(UnboxNullableSingleToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableTimeSpanToEasyDateTime
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableTimeSpanToEasyDateTime" compiler "VisualC"
+
+function UnboxNullableTimeSpanToEasyDateTime
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime
+        comment {}
+)
+: number
+comment { UnboxNullableTimeSpanToEasyDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableTimeSpanToEasyDateTime()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableTimeSpanToEasyDateTime := Internal_UnboxNullableTimeSpanToEasyDateTime( inOh , odtOutDatetime )
+   call Debug::ParamHighDetail('[OUT] out_datetime', odtOutDatetime)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableTimeSpanToEasyDateTime() -> [$(UnboxNullableTimeSpanToEasyDateTime)]')
+}
+
+external session cdecl function Internal_UnboxNullableTimeSpanToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableTimeSpanToEasyNumber" compiler "VisualC"
+
+function UnboxNullableTimeSpanToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableTimeSpanToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableTimeSpanToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableTimeSpanToEasyNumber := Internal_UnboxNullableTimeSpanToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableTimeSpanToEasyNumber() -> [$(UnboxNullableTimeSpanToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableTimeSpanToEasyTime
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otmOutTime:  time as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableTimeSpanToEasyTime" compiler "VisualC"
+
+function UnboxNullableTimeSpanToEasyTime
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otmOutTime:  time
+        comment {}
+)
+: number
+comment { UnboxNullableTimeSpanToEasyTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableTimeSpanToEasyTime()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableTimeSpanToEasyTime := Internal_UnboxNullableTimeSpanToEasyTime( inOh , otmOutTime )
+   call Debug::ParamHighDetail('[OUT] out_time', otmOutTime)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableTimeSpanToEasyTime() -> [$(UnboxNullableTimeSpanToEasyTime)]')
+}
+
+external session cdecl function Internal_UnboxNullableUInt16ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableUInt16ToEasyNumber" compiler "VisualC"
+
+function UnboxNullableUInt16ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableUInt16ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableUInt16ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableUInt16ToEasyNumber := Internal_UnboxNullableUInt16ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableUInt16ToEasyNumber() -> [$(UnboxNullableUInt16ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableUInt32ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableUInt32ToEasyNumber" compiler "VisualC"
+
+function UnboxNullableUInt32ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableUInt32ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableUInt32ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableUInt32ToEasyNumber := Internal_UnboxNullableUInt32ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableUInt32ToEasyNumber() -> [$(UnboxNullableUInt32ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxNullableUInt64ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxNullableUInt64ToEasyNumber" compiler "VisualC"
+
+function UnboxNullableUInt64ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxNullableUInt64ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxNullableUInt64ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxNullableUInt64ToEasyNumber := Internal_UnboxNullableUInt64ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxNullableUInt64ToEasyNumber() -> [$(UnboxNullableUInt64ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSByteToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSByteToEasyNumber" compiler "VisualC"
+
+function UnboxSByteToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxSByteToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSByteToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSByteToEasyNumber := Internal_UnboxSByteToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSByteToEasyNumber() -> [$(UnboxSByteToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle0DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle0DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle0DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxSingle0DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle0DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle0DToEasyNumber := Internal_UnboxSingle0DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle0DToEasyNumber() -> [$(UnboxSingle0DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle10DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,10) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle10DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle10DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,10)
+        comment {}
+)
+: number
+comment { UnboxSingle10DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle10DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle10DToEasyNumber := Internal_UnboxSingle10DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle10DToEasyNumber() -> [$(UnboxSingle10DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle11DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,11) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle11DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle11DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,11)
+        comment {}
+)
+: number
+comment { UnboxSingle11DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle11DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle11DToEasyNumber := Internal_UnboxSingle11DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle11DToEasyNumber() -> [$(UnboxSingle11DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle12DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,12) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle12DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle12DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,12)
+        comment {}
+)
+: number
+comment { UnboxSingle12DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle12DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle12DToEasyNumber := Internal_UnboxSingle12DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle12DToEasyNumber() -> [$(UnboxSingle12DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle13DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,13) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle13DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle13DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,13)
+        comment {}
+)
+: number
+comment { UnboxSingle13DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle13DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle13DToEasyNumber := Internal_UnboxSingle13DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle13DToEasyNumber() -> [$(UnboxSingle13DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle14DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,14) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle14DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle14DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,14)
+        comment {}
+)
+: number
+comment { UnboxSingle14DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle14DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle14DToEasyNumber := Internal_UnboxSingle14DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle14DToEasyNumber() -> [$(UnboxSingle14DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle15DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle15DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle15DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,15)
+        comment {}
+)
+: number
+comment { UnboxSingle15DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle15DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle15DToEasyNumber := Internal_UnboxSingle15DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle15DToEasyNumber() -> [$(UnboxSingle15DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle16DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,16) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle16DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle16DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,16)
+        comment {}
+)
+: number
+comment { UnboxSingle16DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle16DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle16DToEasyNumber := Internal_UnboxSingle16DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle16DToEasyNumber() -> [$(UnboxSingle16DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle17DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,17) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle17DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle17DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,17)
+        comment {}
+)
+: number
+comment { UnboxSingle17DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle17DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle17DToEasyNumber := Internal_UnboxSingle17DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle17DToEasyNumber() -> [$(UnboxSingle17DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle1DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,1) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle1DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle1DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,1)
+        comment {}
+)
+: number
+comment { UnboxSingle1DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle1DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle1DToEasyNumber := Internal_UnboxSingle1DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle1DToEasyNumber() -> [$(UnboxSingle1DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle2DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,2) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle2DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle2DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,2)
+        comment {}
+)
+: number
+comment { UnboxSingle2DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle2DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle2DToEasyNumber := Internal_UnboxSingle2DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle2DToEasyNumber() -> [$(UnboxSingle2DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle3DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,3) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle3DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle3DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,3)
+        comment {}
+)
+: number
+comment { UnboxSingle3DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle3DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle3DToEasyNumber := Internal_UnboxSingle3DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle3DToEasyNumber() -> [$(UnboxSingle3DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle4DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,4) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle4DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle4DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,4)
+        comment {}
+)
+: number
+comment { UnboxSingle4DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle4DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle4DToEasyNumber := Internal_UnboxSingle4DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle4DToEasyNumber() -> [$(UnboxSingle4DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle5DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,5) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle5DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle5DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,5)
+        comment {}
+)
+: number
+comment { UnboxSingle5DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle5DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle5DToEasyNumber := Internal_UnboxSingle5DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle5DToEasyNumber() -> [$(UnboxSingle5DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle6DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,6) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle6DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle6DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,6)
+        comment {}
+)
+: number
+comment { UnboxSingle6DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle6DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle6DToEasyNumber := Internal_UnboxSingle6DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle6DToEasyNumber() -> [$(UnboxSingle6DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle7DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,7) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle7DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle7DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,7)
+        comment {}
+)
+: number
+comment { UnboxSingle7DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle7DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle7DToEasyNumber := Internal_UnboxSingle7DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle7DToEasyNumber() -> [$(UnboxSingle7DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle8DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,8) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle8DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle8DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,8)
+        comment {}
+)
+: number
+comment { UnboxSingle8DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle8DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle8DToEasyNumber := Internal_UnboxSingle8DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle8DToEasyNumber() -> [$(UnboxSingle8DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingle9DToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,9) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingle9DToEasyNumber" compiler "VisualC"
+
+function UnboxSingle9DToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,9)
+        comment {}
+)
+: number
+comment { UnboxSingle9DToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingle9DToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingle9DToEasyNumber := Internal_UnboxSingle9DToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingle9DToEasyNumber() -> [$(UnboxSingle9DToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxSingleToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxSingleToEasyNumber" compiler "VisualC"
+
+function UnboxSingleToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(30,15)
+        comment {}
+)
+: number
+comment { UnboxSingleToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxSingleToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxSingleToEasyNumber := Internal_UnboxSingleToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxSingleToEasyNumber() -> [$(UnboxSingleToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxStringToEasyText
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref otStr:  text as char*
+)
+: number as int
+in "Net4ASLDll" named "UnboxStringToEasyText" compiler "VisualC"
+
+function UnboxStringToEasyText
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref otStr:  text
+        comment {}
+)
+: number
+comment { UnboxStringToEasyText Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxStringToEasyText()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxStringToEasyText := Internal_UnboxStringToEasyText( inOh , otStr )
+   call Debug::ParamHighDetail('[OUT] str', otStr)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxStringToEasyText() -> [$(UnboxStringToEasyText)]')
+}
+
+external session cdecl function Internal_UnboxTimeSpanToEasyDateTime
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxTimeSpanToEasyDateTime" compiler "VisualC"
+
+function UnboxTimeSpanToEasyDateTime
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref odtOutDatetime:  datetime
+        comment {}
+)
+: number
+comment { UnboxTimeSpanToEasyDateTime Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxTimeSpanToEasyDateTime()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxTimeSpanToEasyDateTime := Internal_UnboxTimeSpanToEasyDateTime( inOh , odtOutDatetime )
+   call Debug::ParamHighDetail('[OUT] out_datetime', odtOutDatetime)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxTimeSpanToEasyDateTime() -> [$(UnboxTimeSpanToEasyDateTime)]')
+}
+
+external session cdecl function Internal_UnboxTimeSpanToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutSeconds:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxTimeSpanToEasyNumber" compiler "VisualC"
+
+function UnboxTimeSpanToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutSeconds:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxTimeSpanToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxTimeSpanToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxTimeSpanToEasyNumber := Internal_UnboxTimeSpanToEasyNumber( inOh , onOutSeconds )
+   call Debug::ParamHighDetail('[OUT] out_seconds', onOutSeconds)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxTimeSpanToEasyNumber() -> [$(UnboxTimeSpanToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxUInt16ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxUInt16ToEasyNumber" compiler "VisualC"
+
+function UnboxUInt16ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxUInt16ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxUInt16ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxUInt16ToEasyNumber := Internal_UnboxUInt16ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxUInt16ToEasyNumber() -> [$(UnboxUInt16ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxUInt32ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxUInt32ToEasyNumber" compiler "VisualC"
+
+function UnboxUInt32ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxUInt32ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxUInt32ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxUInt32ToEasyNumber := Internal_UnboxUInt32ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxUInt32ToEasyNumber() -> [$(UnboxUInt32ToEasyNumber)]')
+}
+
+external session cdecl function Internal_UnboxUInt64ToEasyNumber
+(
+    inOh:  number as unsigned long
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0) as easy type
+)
+: number as int
+in "Net4ASLDll" named "UnboxUInt64ToEasyNumber" compiler "VisualC"
+
+function UnboxUInt64ToEasyNumber
+(
+    inOh:  number
+        comment {The Object Handler.},
+    ref onOutNum:  number(18,0)
+        comment {}
+)
+: number
+comment { UnboxUInt64ToEasyNumber Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::UnboxUInt64ToEasyNumber()')
+   call Debug::ParamHighDetail('[IN ] oh', inOh)
+   UnboxUInt64ToEasyNumber := Internal_UnboxUInt64ToEasyNumber( inOh , onOutNum )
+   call Debug::ParamHighDetail('[OUT] out_num', onOutNum)
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::UnboxUInt64ToEasyNumber() -> [$(UnboxUInt64ToEasyNumber)]')
+}
+
+external cdecl function Internal_Version()
+: text as char*
+comment {returns this Dll Version String}
+in "Net4ASLDll" named "Version" compiler "VisualC"
+
+function Version()
+: text
+comment {returns this Dll Version String Version Wrapper.}
+{
+   call Debug::InHighDetail('>> $(@script_info.nameSpace)::Version()')
+   Version := Internal_Version( )
+   call Debug::OutHighDetail('<< $(@script_info.nameSpace)::Version() -> [$(Version)]')
+}

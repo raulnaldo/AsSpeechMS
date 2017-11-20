@@ -1,0 +1,17 @@
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\RaulShort.wav
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\logs4netConfig.xml
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\Raul.wav
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\AsAsrTest.exe.config
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\AsAsrTest.exe
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\AsAsrTest.pdb
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\AsAsrMicrosoft.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\SpeechClient.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\log4net.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Release\log4net.xml
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\obj\Release\AsAsrTest.csprojResolveAssemblyReference.cache
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\obj\Release\AsAsrTest.Form1.resources
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\obj\Release\AsAsrTest.Properties.Resources.resources
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\obj\Release\AsAsrTest.csproj.GenerateResource.Cache
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\obj\Release\AsAsrTest.exe
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\obj\Release\AsAsrTest.pdb

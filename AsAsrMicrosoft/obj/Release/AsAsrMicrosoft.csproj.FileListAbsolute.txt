@@ -1,0 +1,9 @@
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Release\logs4netConfig.xml
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Release\AsAsrMicrosoft.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Release\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Release\log4net.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Release\SpeechClient.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Release\log4net.xml
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.csprojResolveAssemblyReference.cache

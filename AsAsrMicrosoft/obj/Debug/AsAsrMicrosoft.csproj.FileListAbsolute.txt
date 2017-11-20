@@ -1,0 +1,16 @@
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Debug\logs4netConfig.xml
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Debug\AsAsrMicrosoft.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Debug\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Debug\log4net.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Debug\SpeechClient.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\bin\Debug\log4net.xml
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Debug\AsAsrMicrosoft.dll
+E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Debug\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Debug\AsAsrMicrosoft.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Debug\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\logs4netConfig.xml
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\AsAsrMicrosoft.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\log4net.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\SpeechClient.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\log4net.xml
