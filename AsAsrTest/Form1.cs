@@ -24,8 +24,8 @@ namespace AsAsrTest
                 @"E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrTest\bin\Debug",
                 @"C:\",
                 "easyDoro");
-            MessageBox.Show(Asr.Recognice("Raul.wav", 1));
-            
+            string Response=Asr.Recognice("Raul.wav", 5);
+            Asr.PlayTTS(Response,"es-ES",@"C:\HolaMundo.wav");
         }
     }
 }
