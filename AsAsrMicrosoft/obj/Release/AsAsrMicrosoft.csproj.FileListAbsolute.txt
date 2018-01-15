@@ -7,3 +7,15 @@ E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAs
 E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.dll
 E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.pdb
 E:\ASDATA\Source\VOICE_MICROSOFT\Cognitive-Speech-STT-Windows\ASR_MICROSOFT\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.csprojResolveAssemblyReference.cache
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\logs4netConfig.xml
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\AsAsrMicrosoft.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\log4net.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\Newtonsoft.Json.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\SpeechClient.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\log4net.xml
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\Newtonsoft.Json.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Release\Newtonsoft.Json.xml
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Release\AsAsrMicrosoft.csprojResolveAssemblyReference.cache

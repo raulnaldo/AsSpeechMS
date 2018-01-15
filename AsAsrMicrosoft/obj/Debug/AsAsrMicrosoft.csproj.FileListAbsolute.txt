@@ -10,7 +10,11 @@ E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\logs4netCo
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\AsAsrMicrosoft.dll
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\AsAsrMicrosoft.pdb
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\log4net.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\Newtonsoft.Json.dll
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\SpeechClient.dll
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\log4net.xml
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\Newtonsoft.Json.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\bin\Debug\Newtonsoft.Json.xml
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Debug\AsAsrMicrosoft.csprojResolveAssemblyReference.cache
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Debug\AsAsrMicrosoft.dll
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrMicrosoft\obj\Debug\AsAsrMicrosoft.pdb

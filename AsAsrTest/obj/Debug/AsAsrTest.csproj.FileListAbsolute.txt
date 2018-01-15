@@ -24,8 +24,11 @@ E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\AsAsrTest.pdb
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\AsAsrMicrosoft.dll
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\SpeechClient.dll
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\log4net.dll
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\Newtonsoft.Json.dll
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\AsAsrMicrosoft.pdb
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\log4net.xml
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\Newtonsoft.Json.pdb
+E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\bin\Debug\Newtonsoft.Json.xml
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\obj\Debug\AsAsrTest.csprojResolveAssemblyReference.cache
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\obj\Debug\AsAsrTest.Form1.resources
 E:\ASDATA\Source\ROA_AS_SPEECH_MS\AsSpeechMS\AsAsrTest\obj\Debug\AsAsrTest.Properties.Resources.resources

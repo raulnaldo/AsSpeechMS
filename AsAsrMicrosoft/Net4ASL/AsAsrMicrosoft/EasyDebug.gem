@@ -1,0 +1,950 @@
+﻿version "8.1"
+file version 0, 1
+comment {
+	Automatic Generated Dll Wrapper Module.
+	This Module was generated on 2011-10-24 15:36:19
+	by DllTestScriptGeneratorForUCI75 Version 9.4.0
+	for EasyDebug Dll.
+}
+modules{}
+
+dependencies {
+	dll native "easydebug" in file <"easydebug.dll">
+}
+
+constants {
+	MAX_DEBUG_LEVEL:= 15
+		comment {Maximum debug level that will be considered}
+	RETURN_OK:= 0
+		comment {[EasyDebugReturnCodes] Operation successful.}
+	RETURN_ERROR:= "-1"
+		comment {[EasyDebugReturnCodes] Internal Error.}
+	RETURN_ERROR_INVALID_PARAMETERS:= "-2"
+		comment {[EasyDebugReturnCodes] The parameters are invalid.}
+	DEBUG_FILE_FLAG_ATTATCH_PROCESS_PID_TO_DEBUG_FILENAME:= 16
+		comment {[EasyDebugFlags] Add the process ID to the debug filename when starting the debug. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_PRESENTATION_FLAG_PRINT_TIMESTAMPS:= 32
+		comment {[EasyDebugFlags] Add timestamps the debug messages. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_FILE_FLAG_NO_BUFFERING:= 64
+		comment {[EasyDebugFlags] The debug is done directly to file, without buffers. This can be done globally for all messages (global flag is set, overrides local flag) or specified for each message (local flag is set).}
+	DEBUG_PRESENTATION_FLAG_PRINT_CALLER_ID:= 128
+		comment {[EasyDebugFlags] Add the debug user (caller) ID to the debug messages. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_PRESENTATION_FLAG_PRINT_THREAD_ID:= 256
+		comment {[EasyDebugFlags] Print the thread ID. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_PRESENTATION_FLAG_PRINT_TO_STDOUT:= 512
+		comment {[EasyDebugFlags] Print the debug messages to the standard output window. This can be done globally for all messages (global flag is set, overrides local flag) or specified for each message (local flag is set).}
+	DEBUG_OPERATION_FLAG_USE_INDEPENDENT_CALLER_INDENTATION:= 1024
+		comment {[EasyDebugFlags] Use independent indentation per caller. If set it will maintain a context per caller related to the indentation in order to support different indentation levels for each caller. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_PRESENTATION_FLAG_USE_DOTED_INDENTATION_STRINGS:= 2048
+		comment {[EasyDebugFlags] Use doted strings on the Indentation. If set, instead of spaces to mark the indentation, it will use dots (and spaces). Each column on the beginning of a indentation block will be identified by ':' and the last indentation block will be filled by '.', creating a view like a tree view control. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_FILE_FLAG_CLEAN_FILE_CONTENTS_BEFORE_START:= 4096
+		comment {[EasyDebugFlags] Deletes the debug file contents before starting a new debug session. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_OPERATION_FLAG_USE_THREAD_ID_AS_CALLER_ID:= 8192
+		comment {[EasyDebugFlags] Indicates to use the Thread ID as the Caller ID for debug processment. The Caller ID will be Ignored. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_FILE_FLAG_GENERATE_ERROR_LOG_FILE:= 16384
+		comment {[EasyDebugFlags] Indicates to print the error messages (classified as DEBUG_LEVEL_ERROR) to an error file. The error file will have the same filename as the debug file, except that the extension will be '.err'. The error messages will be the same as the debug messages but without indentation. This functioanlity will only be available through the new Debug Leveled Message Functions, the older functions will not support it. This flag can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_FILE_FLAG_ADD_DATE_PREFIX_TO_FILENAME:= 32768
+		comment {[EasyDebugFlags] Add the date as a prefix to the debug filename when starting or restarting the debug. This can only be set globally (global flag), it will be ignored in local flags.}
+	DEBUG_PRESENTATION_FLAG_PRINT_MESSAGE_DEBUG_LEVEL:= 65536
+		comment {[EasyDebugFlags] Indicates to show the debug level on the message itself.}
+	DEBUG_FILE_FLAG_REMOVE_LAST_NAME_FROM_PATH:= 131072
+		comment {[EasyDebugFlags] Indicates to remove the last name from the resolved path, result of a registry key or environment variable, so that if it referred to a file it nows refers the containing folder. Ex: C:\Logs\Easy\easy.log resolves to C:\Logs\Easy.}
+	DEBUG_FILE_FLAG_USE_DEBUG_FILE_SEGMENTS:= 262144
+		comment {[EasyDebugFlags] Indicates to create new debug file segments as soon as a maximum number of lines (default is 10000) is achived or the size of the debug file is over a specified limit (default is 10MB) on a specific segment. Use the DebugFileSetSegmentSizeLimits function to change the default max lines and size values. The use of this flag adds automatically a base id and a segment index to the debug filename. The base id is to differenciate debug sessions when process restart has occurred (like IVR reboot).}
+	DEBUG_LEVEL_HIGH_DETAIL:= 4
+		comment {[EasyDebugLevels] High Detailed Debug.}
+	DEBUG_LEVEL_DETAIL:= 3
+		comment {[EasyDebugLevels] Detailed Debug.}
+	DEBUG_LEVEL_INFO:= 2
+		comment {[EasyDebugLevels] Informational Debug.}
+	DEBUG_LEVEL_IMPORTANT:= 1
+		comment {[EasyDebugLevels] Important Information Debug.}
+	DEBUG_LEVEL_CRITICAL:= 0
+		comment {[EasyDebugLevels] Critical Debug.}
+	DEBUG_LEVEL_ERROR:= 0
+		comment {[EasyDebugLevels] Error Debug.}
+	PROFILE_BASE:= 67616
+		comment {[EasyDebugTipicalDebugConfigurations] Base Debug Configuration, tipically for Single Thread Applications with no Caller ID. It is the same as specifying EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_TIMESTAMPS + EASYDEBUG_DEBUG_PRESENTATION_FLAG_USE_DOTED_INDENTATION_STRINGS + EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_MESSAGE_DEBUG_LEVEL.}
+	PROFILE_BASE_WITH_CALLER_ID:= 68768
+		comment {[EasyDebugTipicalDebugConfigurations] Base Debug Configuration with Caller ID, tipically for Single Thread Applications which may handle resquest like tasksidentified by an id (Caller ID). Is the same as EASYDEBUG_PROFILE_BASE + EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_CALLER_ID + EASYDEBUG_DEBUG_OPERATION_FLAG_USE_INDEPENDENT_CALLER_INDENTATION.}
+	PROFILE_MULTITHREAD:= 77088
+		comment {[EasyDebugTipicalDebugConfigurations] Debug Configuration for Multi Thread Applications/Modules in which there is no Caller ID, but keeping track of the Thread ID is a must. Is the same as EASYDEBUG_PROFILE_BASE + EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_THREAD_ID + EASYDEBUG_DEBUG_OPERATION_FLAG_USE_INDEPENDENT_CALLER_INDENTATION + EASYDEBUG_DEBUG_OPERATION_FLAG_USE_THREAD_ID_AS_CALLER_ID.}
+	PROFILE_MULTITHREAD_WITH_CALLER_ID:= 69024
+		comment {[EasyDebugTipicalDebugConfigurations] Debug Configuration for Multi Thread Applications/Modules in which the Caller ID and the Thread ID are two different things. Is the same as EASYDEBUG_PROFILE_BASE_WITH_CALLER_ID + EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_THREAD_ID.}
+	PROFILE_ASL:= 69024
+		comment {[EasyDebugTipicalDebugConfigurations] Debug Configuration for ASL Scripts, which include Thread and Caller ID information. Is the same as EASYDEBUG_PROFILE_MULTITHREAD_WITH_CALLER_ID.}
+	PROFILE_WIN32_APPLICATION:= 117920
+		comment {[EasyDebugTipicalDebugConfigurations] Debug Configuration for Win32 Applications, which include the auto generation of the debug filename. Is the same as EASYDEBUG_PROFILE_MULTITHREAD_WITH_CALLER_ID + EASYDEBUG_DEBUG_FILE_FLAG_GENERATE_ERROR_LOG_FILE + EASYDEBUG_DEBUG_FILE_FLAG_ADD_DATE_PREFIX_TO_FILENAME.}
+	PROFILE_WIN32_SERVER:= 380064
+		comment {[EasyDebugTipicalDebugConfigurations] Debug Configuration for Win32 Applications, which include the auto generation of the debug filename. Is the same as EASYDEBUG_PROFILE_WIN32_APPLICATION + EASYDEBUG_DEBUG_FILE_FLAG_USE_DEBUG_FILE_SEGMENTS.}
+	DEBUG_FLAG_ATTATCH_PROCESS_PID_TO_DEBUG_FILENAME:= 16
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_FILE_FLAG_ATTATCH_PROCESS_PID_TO_DEBUG_FILENAME}
+	DEBUG_FLAG_WITH_TIMESTAMPS:= 32
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_TIMESTAMPS}
+	DEBUG_FLAG_WITHOUT_BUFFERING:= 64
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_FILE_FLAG_NO_BUFFERING}
+	DEBUG_FLAG_PRINT_CALLER_ID:= 128
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_CALLER_ID}
+	DEBUG_FLAG_PRINT_THREAD_ID:= 256
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_THREAD_ID}
+	DEBUG_FLAG_PRINT_TO_STDOUT:= 512
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_PRESENTATION_FLAG_PRINT_TO_STDOUT}
+	DEBUG_FLAG_USE_INDEPENDENT_CALLER_INDENTATION:= 1024
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_OPERATION_FLAG_USE_INDEPENDENT_CALLER_INDENTATION}
+	DEBUG_FLAG_USE_DOTED_INDENTATION_STRINGS:= 2048
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_PRESENTATION_FLAG_USE_DOTED_INDENTATION_STRINGS}
+	DEBUG_FLAG_CLEAN_FILE_CONTENTS_BEFORE_START:= 4096
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_FILE_FLAG_CLEAN_FILE_CONTENTS_BEFORE_START}
+	DEBUG_FLAG_USE_THREAD_ID_AS_CALLER_ID:= 8192
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_OPERATION_FLAG_USE_THREAD_ID_AS_CALLER_ID}
+	DEBUG_FLAG_GENERATE_ERROR_LOG_FILE:= 16384
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_FILE_FLAG_GENERATE_ERROR_LOG_FILE}
+	DEBUG_FLAG_ADD_DATE_PREFIX_TO_FILENAME:= 32768
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_FILE_FLAG_ADD_DATE_PREFIX_TO_FILENAME}
+	DEBUG_FLAG_DEBUG_PATH_IS_IN_REGISTRY_KEY:= 65536
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! No longer used since it is automatically detected when a registry key is specified.}
+	DEBUG_LEVEL_ALL:= 4
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_DEBUG_LEVEL_HIGH_DETAIL}
+	RETURN_OK_RESTARTED_IN_NEW_FILE:= 1
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Replaced by the property DebugFileChangedOnLastStart.}
+	RETURN_ALREADY_STARTED:= "-3"
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Use the IsActive property instead. Starting the debug after it is already started does no return an error anymore.}
+	PROFILE_STHREAD:= 67616
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_PROFILE_BASE}
+	PROFILE_STHREAD_WITH_CALLER:= 68768
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_PROFILE_BASE_WITH_CALLER_ID}
+	PROFILE_MTHREAD:= 77088
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_PROFILE_MULTITHREAD}
+	PROFILE_MTHREAD_WITH_CALLER:= 69024
+		comment {[EasyDebugDeprecatedDefinitions] Obsolete!! Same as EASYDEBUG_PROFILE_MULTITHREAD_WITH_CALLER_ID}
+}
+
+types{}
+
+variables {}
+
+campaign record {}
+
+contact record {}
+
+workflow record {}
+
+transferred record {}
+
+contact profile extensions {}
+
+outcome record {}
+
+cursors {}
+
+external session stdcall subroutine BinaryStringCritical
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_BinaryStringCritical" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringCriticalReport
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_BinaryStringCriticalReport" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringDetail
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_BinaryStringDetail" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringError
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers).}
+	in "easydebug" named "EasyDebug_BinaryStringError" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringErrorReport
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers). If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_BinaryStringErrorReport" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringHighDetail
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_BinaryStringHighDetail" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringImportant
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_BinaryStringImportant" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringImportantReport
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_BinaryStringImportantReport" compiler "VisualC"
+
+external session stdcall subroutine BinaryStringInfo
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Binary String to be written.},
+	itBinaryString: text as char*
+		comment {The Binary String to be written.},
+	inBinaryStringLength: number(8,0) as int
+		comment {Number of bytes on the Binary String to be written.}
+	)
+	comment {Writes a string with non printable chars to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_BinaryStringInfo" compiler "VisualC"
+
+external session stdcall subroutine ByteStream
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title, to the debug file (according to the debug configuration) in hexadecimal format.}
+	in "easydebug" named "EasyDebug_ByteStream" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamCritical
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ByteStreamCritical" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamCriticalReport
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ByteStreamCriticalReport" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamDetail
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ByteStreamDetail" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamError
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers).}
+	in "easydebug" named "EasyDebug_ByteStreamError" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamErrorReport
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers). If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ByteStreamErrorReport" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamEx
+	(
+	inDebugLevel: number(2,0) as int
+		comment {Debug Level of this Message (values from 0 to 15).},
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title, to the debug file (according to the debug configuration) in hexadecimal format. This will only occur if the specified debug level is below the current debug level. Otherwise it will be ignored.}
+	in "easydebug" named "EasyDebug_ByteStreamEx" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamHighDetail
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ByteStreamHighDetail" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamImportant
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ByteStreamImportant" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamImportantReport
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ByteStreamImportantReport" compiler "VisualC"
+
+external session stdcall subroutine ByteStreamInfo
+	(
+	itMessageTitle: text as char*
+		comment {Title of the Byte Stream to be written.},
+	itByteStream: text as char*
+		comment {The Byte Stream to be written.},
+	inByteStreamLength: number(8,0) as int
+		comment {Number of bytes on the Byte Stream to be written.}
+	)
+	comment {Writes a set of bytes, with a title and in hexadecimal format, to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ByteStreamInfo" compiler "VisualC"
+
+external session stdcall subroutine Critical
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_Critical" compiler "VisualC"
+
+external session stdcall subroutine CriticalReport
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_CriticalReport" compiler "VisualC"
+
+external session stdcall subroutine DebugFileSetSegmentSizeLimits
+	(
+	inMaximumLinesPerSegment: number(8,0) as int
+		comment {The maximum number of lines per debug file segment.},
+	inMaximumSizeInMBPerSegment: number(5,0) as int
+		comment {The maximum size (in MB) of each debug file segment.}
+	)
+	comment {Set the limits of Maximum Number of Lines and Maximum Size per Debug File Segment. If one of these values is reached a new segment will be generated with the same filename but with a different index. The debug segments will only be active if the Debug Flag EASYDEBUG_DEBUG_FILE_FLAG_USE_DEBUG_FILE_SEGMENTS is specified and at least one of the limits value is bigger than 0. If any of the values is 0, it will be ignored. If both are 0, no segmentation will occur.}
+	in "easydebug" named "EasyDebug_DebugFileSetSegmentSizeLimits" compiler "VisualC"
+
+external session stdcall subroutine DebugLevelSet
+	(
+	inDebugLevel: number(2,0) as int
+		comment {The new debug level}
+	)
+	comment {Changes the current debug level.}
+	in "easydebug" named "EasyDebug_DebugLevelSet" compiler "VisualC"
+
+external session stdcall subroutine Detail
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_Detail" compiler "VisualC"
+
+external session stdcall subroutine End()
+	comment {Ends the current debug session and ends the debug to file if no more sessions are active. This function must be called at the end of each the session.}
+	in "easydebug" named "EasyDebug_End" compiler "VisualC"
+
+external stdcall subroutine EndAll()
+	comment {Ends all Debug to File of all Sessions and Debug Files currently active.}
+	in "easydebug" named "EasyDebug_EndAll" compiler "VisualC"
+
+external session stdcall subroutine EndOfLineCharsReplacementActivate
+	(
+	itReplacementChar: text as char*
+		comment {The char to replace the End of Line Chars (\\r and \\n).}
+	)
+	comment {Activate the replacement of end of line chars on the debug messages by the specified char.}
+	in "easydebug" named "EasyDebug_EndOfLineCharsReplacementActivate" compiler "VisualC"
+
+external session stdcall subroutine EndOfLineCharsReplacementDeactivate()
+	comment {Deactivate the replacement of end of line chars on the debug messages.}
+	in "easydebug" named "EasyDebug_EndOfLineCharsReplacementDeactivate" compiler "VisualC"
+
+external session stdcall subroutine Error
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers).}
+	in "easydebug" named "EasyDebug_Error" compiler "VisualC"
+
+external session stdcall subroutine ErrorReport
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers). If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ErrorReport" compiler "VisualC"
+
+external session stdcall subroutine HighDetail
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_HighDetail" compiler "VisualC"
+
+external session stdcall subroutine Important
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_Important" compiler "VisualC"
+
+external session stdcall subroutine ImportantReport
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ImportantReport" compiler "VisualC"
+
+external session stdcall subroutine In
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enter Indentation block. It writes the description (according to the debug configuration) on the debug file and increases the current indentation level.}
+	in "easydebug" named "EasyDebug_In" compiler "VisualC"
+
+external session stdcall subroutine InCritical
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enters an Indentation block identified by the specified description. It writes the description to the debug file (only if the current debug level is higher than or equal to the function debug level) and increases the indentation level of the current session.}
+	in "easydebug" named "EasyDebug_InCritical" compiler "VisualC"
+
+external session stdcall subroutine InDetail
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enters an Indentation block identified by the specified description. It writes the description to the debug file (only if the current debug level is higher than or equal to the function debug level) and increases the indentation level of the current session.}
+	in "easydebug" named "EasyDebug_InDetail" compiler "VisualC"
+
+external session stdcall subroutine InError
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enters an Indentation block identified by the specified description. It writes the description to the debug file (only if the current debug level is higher than or equal to the function debug level) and increases the indentation level of the current session.}
+	in "easydebug" named "EasyDebug_InError" compiler "VisualC"
+
+external session stdcall subroutine InEx
+	(
+	inDebugLevel: number(2,0) as int
+		comment {Debug Level of this Message (values from 0 to 15).},
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enter Indentation block. It writes the description (according to the debug configuration) on the debug file and increases the current indentation level. This will only occur if the specified debug level is below the current debug level. Otherwise it will be ignored.}
+	in "easydebug" named "EasyDebug_InEx" compiler "VisualC"
+
+external session stdcall subroutine InHighDetail
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enters an Indentation block identified by the specified description. It writes the description to the debug file (only if the current debug level is higher than or equal to the function debug level) and increases the indentation level of the current session.}
+	in "easydebug" named "EasyDebug_InHighDetail" compiler "VisualC"
+
+external session stdcall subroutine InImportant
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enters an Indentation block identified by the specified description. It writes the description to the debug file (only if the current debug level is higher than or equal to the function debug level) and increases the indentation level of the current session.}
+	in "easydebug" named "EasyDebug_InImportant" compiler "VisualC"
+
+external session stdcall subroutine InInfo
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Enters an Indentation block identified by the specified description. It writes the description to the debug file (only if the current debug level is higher than or equal to the function debug level) and increases the indentation level of the current session.}
+	in "easydebug" named "EasyDebug_InInfo" compiler "VisualC"
+
+external session stdcall subroutine IndentationReset()
+	comment {Resets the current indentation level to 0 (no indentation).}
+	in "easydebug" named "EasyDebug_IndentationReset" compiler "VisualC"
+
+external session stdcall subroutine IndentationSet
+	(
+	inIndentationLevel: number(2,0) as int
+		comment {New Indentation Level for this Session (between 0 and 38).}
+	)
+	comment {Changes the current indentation level of this session.}
+	in "easydebug" named "EasyDebug_IndentationSet" compiler "VisualC"
+
+external session stdcall subroutine Info
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes the debug message to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_Info" compiler "VisualC"
+
+external session stdcall subroutine MaxDepthSet
+	(
+	inMaxDepth: number(2,0) as int
+		comment {The new Max Depth limit}
+	)
+	comment {Changes the current Max Depth limit. If 0 means that no limit is set and Max Depth feature is disabled.}
+	in "easydebug" named "EasyDebug_MaxDepthSet" compiler "VisualC"
+
+external session stdcall subroutine Msg
+	(
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes a debug message to the debug file (according to the debug configuration).}
+	in "easydebug" named "EasyDebug_Msg" compiler "VisualC"
+
+external session stdcall subroutine MsgEx
+	(
+	inDebugLevel: number(2,0) as int
+		comment {Debug Level of this Message (values from 0 to 15).},
+	itMessage: text as char*
+		comment {Message to be written.}
+	)
+	comment {Writes a debug message to the debug file (according to the debug configuration). This will only occur if the specified debug level is below the current debug level. Otherwise it will be ignored.}
+	in "easydebug" named "EasyDebug_MsgEx" compiler "VisualC"
+
+external session stdcall subroutine Out
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exit Indentation block. It decreases the current indentation level and writes the description (according to the debug configuration) on the debug file.}
+	in "easydebug" named "EasyDebug_Out" compiler "VisualC"
+
+external session stdcall subroutine OutCritical
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exits an Indentation block and associates the specified description to it. It decreases the indentation level of the current session and writes the description to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_OutCritical" compiler "VisualC"
+
+external session stdcall subroutine OutDetail
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exits an Indentation block and associates the specified description to it. It decreases the indentation level of the current session and writes the description to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_OutDetail" compiler "VisualC"
+
+external session stdcall subroutine OutError
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exits an Indentation block and associates the specified description to it. It decreases the indentation level of the current session and writes the description to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_OutError" compiler "VisualC"
+
+external session stdcall subroutine OutEx
+	(
+	inDebugLevel: number(2,0) as int
+		comment {Debug Level of this Message (values from 0 to 15).},
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exit Indentation block. It decreases the current indentation level and writes the description (according to the debug configuration) on the debug file. This will only occur if the specified debug level is below the current debug level. Otherwise it will be ignored.}
+	in "easydebug" named "EasyDebug_OutEx" compiler "VisualC"
+
+external session stdcall subroutine OutHighDetail
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exits an Indentation block and associates the specified description to it. It decreases the indentation level of the current session and writes the description to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_OutHighDetail" compiler "VisualC"
+
+external session stdcall subroutine OutImportant
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exits an Indentation block and associates the specified description to it. It decreases the indentation level of the current session and writes the description to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_OutImportant" compiler "VisualC"
+
+external session stdcall subroutine OutInfo
+	(
+	itDescription: text as char*
+		comment {Message to be written.}
+	)
+	comment {Exits an Indentation block and associates the specified description to it. It decreases the indentation level of the current session and writes the description to the debug file only if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_OutInfo" compiler "VisualC"
+
+external session stdcall subroutine ParamCritical
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ParamCritical" compiler "VisualC"
+
+external session stdcall subroutine ParamCriticalReport
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ParamCriticalReport" compiler "VisualC"
+
+external session stdcall subroutine ParamDetail
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ParamDetail" compiler "VisualC"
+
+external session stdcall subroutine ParamError
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers).}
+	in "easydebug" named "EasyDebug_ParamError" compiler "VisualC"
+
+external session stdcall subroutine ParamErrorReport
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level. It also prints the function stack (indentation headers). If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ParamErrorReport" compiler "VisualC"
+
+external session stdcall subroutine ParamHighDetail
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ParamHighDetail" compiler "VisualC"
+
+external session stdcall subroutine ParamImportant
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ParamImportant" compiler "VisualC"
+
+external session stdcall subroutine ParamImportantReport
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level. If the Error Log File is active, it also writes the message to it.}
+	in "easydebug" named "EasyDebug_ParamImportantReport" compiler "VisualC"
+
+external session stdcall subroutine ParamInfo
+	(
+	itParamName: text as char*
+		comment {The Param Name to be printed.},
+	itParamValue: text as char*
+		comment {The Param Value to be printed.}
+	)
+	comment {Writes a parameter name and value in a fixed format: name ...... [value]. This will only occur if the current debug level is higher than or equal to the function debug level.}
+	in "easydebug" named "EasyDebug_ParamInfo" compiler "VisualC"
+
+external session stdcall subroutine ResetIndentation()
+	comment {Resets the current indentation level to 0 (no indentation).}
+	in "easydebug" named "EasyDebug_ResetIndentation" compiler "VisualC"
+
+external session stdcall subroutine SetDebugLevel
+	(
+	inDebugLevel: number(2,0) as int
+		comment {The new debug level}
+	)
+	comment {Changes the current debug level.}
+	in "easydebug" named "EasyDebug_SetDebugLevel" compiler "VisualC"
+
+external session stdcall subroutine SetIndentation
+	(
+	inIndentationLevel: number(2,0) as int
+		comment {New Indentation Level for this Session (between 0 and 38).}
+	)
+	comment {Changes the current indentation level of this session.}
+	in "easydebug" named "EasyDebug_SetIndentation" compiler "VisualC"
+
+external session stdcall subroutine SetMaximumLinesPerDebugFile
+	(
+	inMaximumLinesPerSegment: number(8,0) as int
+		comment {The maximum number of lines per debug file segment.}
+	)
+	comment {Set the Maximum Number of Lines per Debug File. If this value is reached, a new segment will be generated with the same filename but with an index. The debug segments will only be active if the Maximum Number of Lines per Debug File is a positive value (greater than 0). The debug segments will only be active if the Debug Flag EASYDEBUG_DEBUG_FILE_FLAG_USE_DEBUG_FILE_SEGMENTS is specified and the nMaximumLinesPerSegment value is bigger than 0.}
+	in "easydebug" named "EasyDebug_SetMaximumLinesPerDebugFile" compiler "VisualC"
+
+external session stdcall subroutine SetWriteWhithoutBuffering()
+	comment {Set unbuffered message writing. All debug messages will be written to file immediately. This will lower the performance of the application, but the debug file will map exactly where the application is (through the debug messages).}
+	in "easydebug" named "EasyDebug_SetWriteWhithoutBuffering" compiler "VisualC"
+
+external session stdcall subroutine UnsetWriteWhithoutBuffering()
+	comment {Unset unbuffered message writing. All debug messages will be written to file when the Operating System decides. The application will have better performance, but the debug file will not map exactly where the application is (through the debug messages).}
+	in "easydebug" named "EasyDebug_UnsetWriteWhithoutBuffering" compiler "VisualC"
+
+external session stdcall subroutine WriteWhithoutBufferingSet()
+	comment {Set unbuffered message writing. All debug messages will be written to file immediately. This will lower the performance of the application, but the debug file will map exactly where the application is (through the debug messages).}
+	in "easydebug" named "EasyDebug_WriteWhithoutBufferingSet" compiler "VisualC"
+
+external session stdcall subroutine WriteWhithoutBufferingUnset()
+	comment {Unset unbuffered message writing. All debug messages will be written to file when the Operating System decides. The application will have better performance, but the debug file will not map exactly where the application is (through the debug messages).}
+	in "easydebug" named "EasyDebug_WriteWhithoutBufferingUnset" compiler "VisualC"
+
+
+external session stdcall function DebugFileChangedOnLastStart()
+	: number as int
+	comment {Checks if the Debug was restarted on a new file after a start operation (does not apply to the initial start).}
+	in "easydebug" named "EasyDebug_DebugFileChangedOnLastStart" compiler "VisualC"
+
+external session stdcall function DebugFileGetCurrentFilename()
+	: text as char*
+	comment {Gets the current (complete) Debug Filename.}
+	in "easydebug" named "EasyDebug_DebugFileGetCurrentFilename" compiler "VisualC"
+
+external session stdcall function DebugLevelGet()
+	: number(2,0) as int
+	comment {Returns the current debug level.}
+	in "easydebug" named "EasyDebug_DebugLevelGet" compiler "VisualC"
+
+external session stdcall function FastStart
+	(
+	itDebugActive: text(1) as char*
+		comment {Debug Activation Type: Y (active with buffering), D (active without buffering), N (not active).},
+	itFullFileName: text(255) as char*
+		comment {Full filename (including path) of the debug file}
+	)
+	: number(1,0) as int
+	comment {Same as the Restart function, but using pre-defined debug configuration based on the type of application that has loaded the dll. The recognized applications and the flags used are: etalk (ETalk) - EASYDEBUG_WITH_TIMESTAMPS, EASYDEBUG_PRINT_CALLER_ID, EASYDEBUG_USE_INDEPENDENT_CALLER_INDENTATION; uagentwin (uAgentWindows) - Same flags as ETalk; eitalk (IVR) and ertalk (uRouter) - Same flags as ETalk, plus DEBUG_PRINT_TO_STDOUT and DEBUG_PRINT_THREAD_ID . To other applications the same flags of ETalk will be applied. If the DebugActive is set to 'N', then the debug in all active sessions will end.}
+	in "easydebug" named "EasyDebug_FastStart" compiler "VisualC"
+
+external session stdcall function FastStartP
+	(
+	itDebugActive: text(1) as char*
+		comment {Debug Activation Type: Y (active with buffering), D (active without buffering), N (not active).},
+	itDebugPath: text(255) as char*
+		comment {Debug Directory (Path).},
+	itFileName: text(255) as char*
+		comment {Filename (not including path) of the debug file.}
+	)
+	: number(1,0) as int
+	comment {Same as the RestartP function, but using pre-defined debug configuration based on the type of application that has loaded the dll. The recognized applications and the flags used are: etalk (ETalk) - EASYDEBUG_WITH_TIMESTAMPS, EASYDEBUG_PRINT_CALLER_ID, EASYDEBUG_USE_INDEPENDENT_CALLER_INDENTATION; uagentwin (uAgentWindows) - Same flags as ETalk; eitalk (IVR) and ertalk (uRouter) - Same flags as ETalk, plus DEBUG_PRINT_TO_STDOUT and DEBUG_PRINT_THREAD_ID . To other applications the same flags of ETalk will be applied. If the DebugActive is set to 'N', then the debug in all active sessions will end.}
+	in "easydebug" named "EasyDebug_FastStartP" compiler "VisualC"
+
+external session stdcall function GetDebugFilename()
+	: text as char*
+	comment {Gets the current Debug Filename (complete).}
+	in "easydebug" named "EasyDebug_GetDebugFilename" compiler "VisualC"
+
+external session stdcall function GetDebugLevel()
+	: number(2,0) as int
+	comment {Returns the current debug level.}
+	in "easydebug" named "EasyDebug_GetDebugLevel" compiler "VisualC"
+
+external session stdcall function GetIndentation()
+	: number(2,0) as int
+	comment {Returns the current indentation level of this session.}
+	in "easydebug" named "EasyDebug_GetIndentation" compiler "VisualC"
+
+external session stdcall function IndentationGet()
+	: number(2,0) as int
+	comment {Returns the current indentation level of this session.}
+	in "easydebug" named "EasyDebug_IndentationGet" compiler "VisualC"
+
+external stdcall function IsActive()
+	: number(1,0) as int
+	comment {Indicates if the debug is active (1) or not (0).}
+	in "easydebug" named "EasyDebug_IsActive" compiler "VisualC"
+
+external session stdcall function MaxDepthGet()
+	: number(2,0) as int
+	comment {Returns the current Max Depth limit. If 0 means that no limit is set.}
+	in "easydebug" named "EasyDebug_MaxDepthGet" compiler "VisualC"
+
+external session stdcall function Restart
+	(
+	itFullFileName: text(255) as char*
+		comment {Full filename (including path) of the debug file.},
+	inGlobalFlags: number(8,0) as int
+		comment {Global Configuration flags for the debug.}
+	)
+	: number(1,0) as int
+	comment {Starts the debug to file if it is not active, restarts the debug if the debug filename has changed or if the flag EASYDEBUG_ATTATCH_PROCESS_PID_TO_EASYDEBUG_FILENAME state has changed, and updates the debug configuration if only the debug global flags have changed. If the filename is the empty string, it ends the debug (if it is active).}
+	in "easydebug" named "EasyDebug_Restart" compiler "VisualC"
+
+external session stdcall function RestartDL
+	(
+	itFullFileName: text(255) as char*
+		comment {Full filename (including path) of the debug file},
+	inDebugLevel: number(2,0) as int
+		comment {The debug level to use.},
+	inDebugFlags: number(8,0) as int
+		comment {Debug Configuration flags for the debug}
+	)
+	: number(1,0) as int
+	comment {Starts the debug to file if it is not active, restarts the debug if the debug filename has changed or if the flags that affect the debug filename have changed. Updates the debug configuration if only the other debug flags have changed. If the filename is the empty string, it ends the debug (if active). If the debug level is below 0 the debug will not be active, and if active will be ended.}
+	in "easydebug" named "EasyDebug_RestartDL" compiler "VisualC"
+
+external session stdcall function RestartDLP
+	(
+	itDebugPath: text(255) as char*
+		comment {Debug Directory (Path). If the flag EASYDEBUG_DEBUG_FILE_FLAG_DEBUG_PATH_IS_IN_REGISTRY_KEY is specified, the debug path indicates a registry key (for example: 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Altitude\\Altitude uCI 7.1\\Altitude uAgent Windows\\debug_dir'), which will have the real debug path on the filesystem.},
+	itFileName: text(255) as char*
+		comment {Filename (not including path) of the debug file},
+	inDebugLevel: number(2,0) as int
+		comment {The debug level to use.},
+	inDebugFlags: number(8,0) as int
+		comment {Debug Configuration flags for the debug}
+	)
+	: number(1,0) as int
+	comment {Starts the debug to file if it is not active, restarts the debug if the debug filename has changed or if the flag EASYDEBUG_ATTATCH_PROCESS_PID_TO_EASYDEBUG_FILENAME state has changed, and updates the debug configuration if only the debug global flags have changed. If the filename is the empty string, it ends the debug (if it is active).}
+	in "easydebug" named "EasyDebug_RestartDLP" compiler "VisualC"
+
+external session stdcall function RestartP
+	(
+	itDebugPath: text(255) as char*
+		comment {Debug Directory (Path). The debug file path can be a usual folder, a network shared folder, a folder identified by or containing local environment variables (like %TEMP%) or a key on windows registry.},
+	itFileName: text(255) as char*
+		comment {Filename (not including path) of the debug file.},
+	inGlobalFlags: number(8,0) as int
+		comment {Global Configuration flags for the debug.}
+	)
+	: number(1,0) as int
+	comment {Starts the debug to file if it is not active, restarts the debug if the debug filename has changed or if the flag EASYDEBUG_ATTATCH_PROCESS_PID_TO_EASYDEBUG_FILENAME state has changed, and updates the debug configuration if only the debug global flags have changed. If the filename is the empty string, it ends the debug (if it is active).}
+	in "easydebug" named "EasyDebug_RestartP" compiler "VisualC"
+
+external session stdcall function Start
+	(
+	itFullFileName: text(255) as char*
+		comment {Full filename (including path) of the debug file},
+	inGlobalFlags: number(8,0) as int
+		comment {Global Configuration flags for the debug}
+	)
+	: number(1,0) as int
+	comment {Starts the debug to file accordingly to the debug configuration specified on the global debug flags. If the debug is active, it will return EASYDEBUG_ALREADY_STARTED and it won't change the current debug configuration. To restart the debug, call EasyDebug_Restart.}
+	in "easydebug" named "EasyDebug_Start" compiler "VisualC"
+
+external session stdcall function StartP
+	(
+	itDebugPath: text(255) as char*
+		comment {Debug Directory (Path). The debug file path can be a usual folder, a network shared folder, a folder identified by or containing local environment variables (like %TEMP%) or a key on windows registry.},
+	itFileName: text(255) as char*
+		comment {Filename (not including path) of the debug file.},
+	inGlobalFlags: number(8,0) as int
+		comment {Global Configuration flags for the debug.}
+	)
+	: number(1,0) as int
+	comment {Starts the debug to file accordingly to the debug configuration specified on the global debug flags. If the debug is active, it will return EASYDEBUG_ALREADY_STARTED and it won't change the current debug configuration. To restart the debug, call EasyDebug_Restart.}
+	in "easydebug" named "EasyDebug_StartP" compiler "VisualC"
+
+external session stdcall function Version()
+	: text(255) as char*
+	comment {Return the EasyDebug Dll Name, Version and Built Timestamp}
+	in "easydebug" named "EasyDebug_Version" compiler "VisualC"
+
+
+on load {}
+
+on unload {}

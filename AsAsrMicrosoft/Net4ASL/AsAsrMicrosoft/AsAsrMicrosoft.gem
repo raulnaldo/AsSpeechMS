@@ -230,10 +230,10 @@ io_objectHandle : ObjectHandle ,ref AsAsrMicrosoft_IsReferenceOfType_Return : te
 }
 function new_AsAsrMicrosoft
 (
-pLogs4NetDir : String ,pDebugDir : String ,pUserName : String ,pSubscriptionKey : String ,ref new_AsAsrMicrosoft_Return : AsAsrMicrosoft 
+pLogs4NetDir : String ,pDebugDir : String ,pUserName : String ,ref new_AsAsrMicrosoft_Return : AsAsrMicrosoft 
 )
  : ErrorCode {
-	call EasyDebug::InHighDetail('>> new_AsAsrMicrosoft(pLogs4NetDir:[$(pLogs4NetDir)], pDebugDir:[$(pDebugDir)], pUserName:[$(pUserName)], pSubscriptionKey:[$(pSubscriptionKey)])')
+	call EasyDebug::InHighDetail('>> new_AsAsrMicrosoft(pLogs4NetDir:[$(pLogs4NetDir)], pDebugDir:[$(pDebugDir)], pUserName:[$(pUserName)])')
 	gn_error := 0
 	var lo_pLogs4NetDir : ObjectHandle
 	if (gn_error = 0) then 		{
@@ -247,15 +247,11 @@ pLogs4NetDir : String ,pDebugDir : String ,pUserName : String ,pSubscriptionKey 
 	if (gn_error = 0) then 		{
 		gn_error := Net4ASL::BoxEasyTextToString(pUserName, lo_pUserName)
 			}
-	var lo_pSubscriptionKey : ObjectHandle
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::BoxEasyTextToString(pSubscriptionKey, lo_pSubscriptionKey)
-			}
 	var lt_lh_params_assemblyPath : text := 'AsAsrMicrosoft.dll'
 	var lt_lh_params_assembly : text := ''
 	var lt_lh_params_type : text := 'System.Object'
 	var lh_params : ObjectHandle
-	var ln_lh_params_size : number(18,0) := 4
+	var ln_lh_params_size : number(18,0) := 3
 	if (gn_error = 0) then 		{
 		gn_error := Net4ASL::CreateArray(lt_lh_params_assemblyPath, lt_lh_params_assembly, lt_lh_params_type, ln_lh_params_size, lh_params)
 			}
@@ -267,9 +263,6 @@ pLogs4NetDir : String ,pDebugDir : String ,pUserName : String ,pSubscriptionKey 
 			}
 	if (gn_error = 0) then 		{
 		gn_error := Net4ASL::SetArrayValue(lh_params, 2, lo_pUserName)
-			}
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::SetArrayValue(lh_params, 3, lo_pSubscriptionKey)
 			}
 	var lt_lh_instance_assembly : text := 'AsAsrMicrosoft.dll'
 	var lt_lh_instance_type : text := 'AsAsrMicrosoft.AsAsrMicrosoft'
@@ -707,190 +700,6 @@ ref new_LuisOutputResponse_Return : LuisOutputResponse
 	}
 	new_LuisOutputResponse := gn_error
 	call EasyDebug::OutHighDetail('<< new_LuisOutputResponse(new_LuisOutputResponse_Return: some value)')
-}
-function LuisOutputResponse_ToString
-(
-ref rh_instance : LuisOutputResponse
-,ref LuisOutputResponse_ToString_Return : String 
-)
- : ErrorCode {
-	call EasyDebug::InHighDetail('>> LuisOutputResponse_ToString(rh_instance:[$(rh_instance)])')
-	gn_error := 0
-	var lt_lh_params_assemblyPath : text := 'AsAsrMicrosoft.dll'
-	var lt_lh_params_assembly : text := ''
-	var lt_lh_params_type : text := 'System.Object'
-	var lh_params : ObjectHandle
-	var ln_lh_params_size : number(18,0) := 0
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::CreateArray(lt_lh_params_assemblyPath, lt_lh_params_assembly, lt_lh_params_type, ln_lh_params_size, lh_params)
-			}
-	var lt_ToString_method : text := 'ToString'
-	var lh_retVar : ObjectHandle
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::Invoke(rh_instance, lt_ToString_method, lh_params, lh_retVar, go_exception)
-			}
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::UnboxStringToEasyText(lh_retVar, LuisOutputResponse_ToString_Return)
-			}
-	if (gn_error <> 0) then 	{
-		var lt_errorMessage : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-		if (gn_error = Net4ASL::RETURN_EXCEPTION) then 		{
-			var lt_excMessage : text
-			var lt_excStackTrace : text
-			var lt_excInnerException : ObjectHandle
-			var ln_error_swap : ErrorCode
-			ln_error_swap := gn_error
-			gn_error := Net4ASL::ExceptionDetails(go_exception, lt_excMessage, lt_excStackTrace, lt_excInnerException)
-			if (gn_error <> Net4ASL::RETURN_OK) then 			{
-				var lt_excMessageDetailFailed : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-				call EasyDebug::Error('[ERROR] $(lt_excMessageDetailFailed)')
-			}
-			gn_error := ln_error_swap
-			lt_errorMessage := '$(lt_errorMessage) Exception: [$(lt_excMessage)] [$(lt_excStackTrace)]'
-		}
-		call EasyDebug::Error('[ERROR] $(lt_errorMessage)')
-	}
-	LuisOutputResponse_ToString := gn_error
-	call EasyDebug::OutHighDetail('<< LuisOutputResponse_ToString(LuisOutputResponse_ToString_Return:[$(LuisOutputResponse_ToString_Return)])')
-}
-function LuisOutputResponse_Equals
-(
-ref rh_instance : LuisOutputResponse
-,obj : ObjectHandle ,ref LuisOutputResponse_Equals_Return : Boolean 
-)
- : ErrorCode {
-	call EasyDebug::InHighDetail('>> LuisOutputResponse_Equals(rh_instance:[$(rh_instance)], obj:[$(obj)])')
-	gn_error := 0
-	var lo_obj : ObjectHandle
-	call EasyDebug::HighDetail('Assigning obj to lo_obj...')
-	lo_obj := obj
-	var lt_lh_params_assemblyPath : text := 'AsAsrMicrosoft.dll'
-	var lt_lh_params_assembly : text := ''
-	var lt_lh_params_type : text := 'System.Object'
-	var lh_params : ObjectHandle
-	var ln_lh_params_size : number(18,0) := 1
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::CreateArray(lt_lh_params_assemblyPath, lt_lh_params_assembly, lt_lh_params_type, ln_lh_params_size, lh_params)
-			}
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::SetArrayValue(lh_params, 0, lo_obj)
-			}
-	var lt_Equals_method : text := 'Equals'
-	var lh_retVar : ObjectHandle
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::Invoke(rh_instance, lt_Equals_method, lh_params, lh_retVar, go_exception)
-			}
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::UnboxBooleanToEasyBoolean(lh_retVar, LuisOutputResponse_Equals_Return)
-			}
-	if (gn_error <> 0) then 	{
-		var lt_errorMessage : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-		if (gn_error = Net4ASL::RETURN_EXCEPTION) then 		{
-			var lt_excMessage : text
-			var lt_excStackTrace : text
-			var lt_excInnerException : ObjectHandle
-			var ln_error_swap : ErrorCode
-			ln_error_swap := gn_error
-			gn_error := Net4ASL::ExceptionDetails(go_exception, lt_excMessage, lt_excStackTrace, lt_excInnerException)
-			if (gn_error <> Net4ASL::RETURN_OK) then 			{
-				var lt_excMessageDetailFailed : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-				call EasyDebug::Error('[ERROR] $(lt_excMessageDetailFailed)')
-			}
-			gn_error := ln_error_swap
-			lt_errorMessage := '$(lt_errorMessage) Exception: [$(lt_excMessage)] [$(lt_excStackTrace)]'
-		}
-		call EasyDebug::Error('[ERROR] $(lt_errorMessage)')
-	}
-	LuisOutputResponse_Equals := gn_error
-	call EasyDebug::OutHighDetail('<< LuisOutputResponse_Equals(LuisOutputResponse_Equals_Return:[$(LuisOutputResponse_Equals_Return)])')
-}
-function LuisOutputResponse_GetHashCode
-(
-ref rh_instance : LuisOutputResponse
-,ref LuisOutputResponse_GetHashCode_Return : Int32 
-)
- : ErrorCode {
-	call EasyDebug::InHighDetail('>> LuisOutputResponse_GetHashCode(rh_instance:[$(rh_instance)])')
-	gn_error := 0
-	var lt_lh_params_assemblyPath : text := 'AsAsrMicrosoft.dll'
-	var lt_lh_params_assembly : text := ''
-	var lt_lh_params_type : text := 'System.Object'
-	var lh_params : ObjectHandle
-	var ln_lh_params_size : number(18,0) := 0
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::CreateArray(lt_lh_params_assemblyPath, lt_lh_params_assembly, lt_lh_params_type, ln_lh_params_size, lh_params)
-			}
-	var lt_GetHashCode_method : text := 'GetHashCode'
-	var lh_retVar : ObjectHandle
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::Invoke(rh_instance, lt_GetHashCode_method, lh_params, lh_retVar, go_exception)
-			}
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::UnboxInt32ToEasyNumber(lh_retVar, LuisOutputResponse_GetHashCode_Return)
-			}
-	if (gn_error <> 0) then 	{
-		var lt_errorMessage : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-		if (gn_error = Net4ASL::RETURN_EXCEPTION) then 		{
-			var lt_excMessage : text
-			var lt_excStackTrace : text
-			var lt_excInnerException : ObjectHandle
-			var ln_error_swap : ErrorCode
-			ln_error_swap := gn_error
-			gn_error := Net4ASL::ExceptionDetails(go_exception, lt_excMessage, lt_excStackTrace, lt_excInnerException)
-			if (gn_error <> Net4ASL::RETURN_OK) then 			{
-				var lt_excMessageDetailFailed : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-				call EasyDebug::Error('[ERROR] $(lt_excMessageDetailFailed)')
-			}
-			gn_error := ln_error_swap
-			lt_errorMessage := '$(lt_errorMessage) Exception: [$(lt_excMessage)] [$(lt_excStackTrace)]'
-		}
-		call EasyDebug::Error('[ERROR] $(lt_errorMessage)')
-	}
-	LuisOutputResponse_GetHashCode := gn_error
-	call EasyDebug::OutHighDetail('<< LuisOutputResponse_GetHashCode(LuisOutputResponse_GetHashCode_Return:[$(LuisOutputResponse_GetHashCode_Return)])')
-}
-function LuisOutputResponse_GetType
-(
-ref rh_instance : LuisOutputResponse
-,ref LuisOutputResponse_GetType_Return : ObjectHandle 
-)
- : ErrorCode {
-	call EasyDebug::InHighDetail('>> LuisOutputResponse_GetType(rh_instance:[$(rh_instance)])')
-	gn_error := 0
-	var lt_lh_params_assemblyPath : text := 'AsAsrMicrosoft.dll'
-	var lt_lh_params_assembly : text := ''
-	var lt_lh_params_type : text := 'System.Object'
-	var lh_params : ObjectHandle
-	var ln_lh_params_size : number(18,0) := 0
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::CreateArray(lt_lh_params_assemblyPath, lt_lh_params_assembly, lt_lh_params_type, ln_lh_params_size, lh_params)
-			}
-	var lt_GetType_method : text := 'GetType'
-	var lh_retVar : ObjectHandle
-	if (gn_error = 0) then 		{
-		gn_error := Net4ASL::Invoke(rh_instance, lt_GetType_method, lh_params, lh_retVar, go_exception)
-			}
-	LuisOutputResponse_GetType_Return := lh_retVar
-	if (gn_error <> 0) then 	{
-		var lt_errorMessage : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-		if (gn_error = Net4ASL::RETURN_EXCEPTION) then 		{
-			var lt_excMessage : text
-			var lt_excStackTrace : text
-			var lt_excInnerException : ObjectHandle
-			var ln_error_swap : ErrorCode
-			ln_error_swap := gn_error
-			gn_error := Net4ASL::ExceptionDetails(go_exception, lt_excMessage, lt_excStackTrace, lt_excInnerException)
-			if (gn_error <> Net4ASL::RETURN_OK) then 			{
-				var lt_excMessageDetailFailed : text := 'Error: [$(gn_error)] Message: [$(Net4ASL::ErrorMessage(gn_error))]'
-				call EasyDebug::Error('[ERROR] $(lt_excMessageDetailFailed)')
-			}
-			gn_error := ln_error_swap
-			lt_errorMessage := '$(lt_errorMessage) Exception: [$(lt_excMessage)] [$(lt_excStackTrace)]'
-		}
-		call EasyDebug::Error('[ERROR] $(lt_errorMessage)')
-	}
-	LuisOutputResponse_GetType := gn_error
-	call EasyDebug::OutHighDetail('<< LuisOutputResponse_GetType(LuisOutputResponse_GetType_Return:[$(LuisOutputResponse_GetType_Return)])')
 }
 function LuisOutputResponse_query_Get
 (

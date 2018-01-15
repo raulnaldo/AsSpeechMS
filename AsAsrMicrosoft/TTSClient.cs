@@ -49,6 +49,7 @@ namespace CognitiveServicesTTS
     public class Authentication
     {
         public static readonly string AccessUri = "https://api.cognitive.microsoft.com/sts/v1.0/issueToken";
+        //public static readonly string AccessUri = "https://api.cognitive.microsoft.com/sts/v1.0";
         private string apiKey;
         private string accessToken;
         private Timer accessTokenRenewer;
